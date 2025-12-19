@@ -1,7 +1,9 @@
 .pillarsWrapper {
     width: 100%;
     min-height: 1200px;
-    background: url('/img_rectangle_5.png') no-repeat center center;
+    background: url('/img_rectangle_5.png') no-repeat center center,
+        url('/Rectangle 6.png') no-repeat center center,
+        #06061A;
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -115,7 +117,7 @@
     width: 1220px;
     height: 1px;
     background: #666666;
-    top: 550px;
+    top: 630px;
     /* Moved up from 610px */
     /* Positioned between grid (1-4) and Pillar 5 */
     left: 40px;
