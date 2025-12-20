@@ -26,9 +26,10 @@ import {
 
 const Navbar1 = ({
   logo = {
-    url: "public/logo1.png",
-    src: "public/logo1.png",
+    url: "https://www.shadcnblocks.com",
+    src: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/logos/shadcnblockscom-icon.svg",
     alt: "logo",
+    title: "Shadcnblocks.com",
   },
 
   menu = [
@@ -95,8 +96,8 @@ const Navbar1 = ({
 
       {/* Mobile Menu */}
       <div className="block lg:hidden">
-        <div className="flex items-center justify-between px-6 py-4
-          rounded-[99px]
+        <div className="flex items-center justify-between w-full
+          rounded-[80px]
           bg-[rgba(236,241,244,0.03)]
           backdrop-blur-[10px]
           border border-[rgba(255,255,255,0.18)]
@@ -106,9 +107,9 @@ const Navbar1 = ({
           <a href={logo.url} className="flex items-center">
             <Image 
               src="/logo1.png" 
-              width={84}
-              height={50}
-              className="" 
+              width={100}
+              height={200}
+              className=" px-6 " 
               alt={logo.alt} 
             />
           </a>
@@ -133,8 +134,8 @@ const Navbar1 = ({
                   <a href={logo.url} className="flex items-center gap-2">
                     <Image 
                       src="/logo1.png" 
-                      width={84}
-                      height={50}
+                      width={60}
+                      height={40}
                       alt={logo.alt} 
                     />
                   </a>
@@ -159,9 +160,9 @@ const renderMenuItem = (item) => {
     return (
       <NavigationMenuItem key={item.title}>
         <NavigationMenuTrigger>{item.title}</NavigationMenuTrigger>
-        <NavigationMenuContent className="bg-popover text-popover-foreground">
+        <NavigationMenuContent className="bg-white text-popover-foreground">
           {item.items.map((subItem) => (
-            <NavigationMenuLink asChild key={subItem.title} className="w-80">
+            <NavigationMenuLink asChild key={subItem.title} className="w-80 text-white">
               <SubMenuLink item={subItem} />
             </NavigationMenuLink>
           ))}

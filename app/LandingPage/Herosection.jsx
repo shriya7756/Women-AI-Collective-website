@@ -5,11 +5,11 @@ import {Navbar1} from "@/components/ui/navbar1"
 export default function  Herosection(){
     return (
        <>
-<section className="min-h-screen overflow-hidden bg-[#31091E] relative">
-  {/* background gradient */}
+<section className=" hidden lg:block min-h-screen overflow-hidden bg-[#31091E] relative">
+  {/*background gradient */}
   <div className='absolute inset-0 z-0'>
 
-    {/* Image positioned absolutely */}
+   {/*Image positioned absolutely */}
     <Image
       src="/pink light gradient.png"
       width={1000}
@@ -20,31 +20,29 @@ export default function  Herosection(){
   </div>
 
 <div className='relative z-10 flex flex-col min-h-screen'>
-  {/*Navbar component from ui folder*/}
+ 
   <Navbar1/>
 <div className="mx-auto w-[1000px] h-[58px] bg-[#06061A]/50 rounded-[10px] px-8 flex items-center justify-center gap-4 shadow-[0px_0px_10px_0px_rgba(255,255,255,0.2)] backdrop-blur-sm">
   
-  <div className="relative w-6 h-[25px]">
-  <div 
-    className="absolute top-0 left-0 w-6 h-[25px] rounded-full"
-    style={{ background: '#F1247B' }}
-  />
-  
-
-  <div 
-    className="absolute top-[1px] left-[1px] w-[22px] h-[23px] rounded-full"
-    style={{ background: '#F991CC' }}
-  />
-  <div 
-    className="absolute top-[5px] left-[5px] w-[14px] h-[15px] rounded-full"
-    style={{ background: '#F1247B' }}
-  />
-</div> 
-  <span className="font-work font-bold text-[18px] md:text-[20px] text-[#F5C939]  ">
-    Applications are now open for the Artificial Intelligence 101 Program 2026
-  </span>
-
-</div>
+              <div className="relative w-5 h-5 md:w-6 md:h-[25px] flex-shrink-0">
+                <div
+                  className="absolute top-0 left-0 w-5 h-5 md:w-6 md:h-[25px] rounded-full"
+                  style={{ background: '#F1247B' }}
+                />
+                <div
+                  className="absolute top-[1px] left-[1px] w-[18px] h-[18px] md:w-[22px] md:h-[23px] rounded-full"
+                  style={{ background: '#F991CC' }}
+                />
+                <div
+                  className="absolute top-[4px] left-[4px] md:top-[5px] md:left-[5px] w-[12px] h-[12px] md:w-[14px] md:h-[15px] rounded-full"
+                  style={{ background: '#F1247B' }}
+                />
+              </div>
+              <span className="font-work font-bold text-[14px] md:text-[18px] lg:text-[20px] text-[#F5C939] text-center leading-tight">
+                Applications are now open for the Artificial Intelligence 101 Program 2026
+              </span>
+            </div>
+          
 
    <div className="flex justify-center  sm:mb-1 md:mb-2 lg:mb-4 ">
     <Image
