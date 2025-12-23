@@ -1,18 +1,22 @@
 import React from 'react';
 import styles from './ProgramHighlightsSection.module.css';
 
+interface Highlight {
+    title: string;
+    text: string;
+    className: string;
+    imageUrl?: string;
+    icon?: React.ReactNode;
+    showArrow?: boolean;
+}
+
 const ProgramHighlightsSection = () => {
-    const highlights = [
+    const highlights: Highlight[] = [
         {
             title: "Weekly Live Sessions",
             text: "6-week live near-peer session on Saturdays.",
             className: styles.card1,
-            icon: (
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={styles.icon}>
-                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                    <polygon points="10 8 14 11 10 14 10 8"></polygon>
-                </svg>
-            )
+            imageUrl: "/Laptop Play Video.png"
         },
         {
             title: "Professional Workshops",
@@ -24,14 +28,7 @@ const ProgramHighlightsSection = () => {
             title: "15+ Gen AI Tools hands-on learning",
             text: "15+ cutting-edge AI tools that will help you from Upskilling to Job Application to Elevating your workflows.",
             className: styles.card3,
-            icon: (
-                <svg viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={styles.icon}>
-                    <rect x="3" y="3" width="7" height="7"></rect>
-                    <rect x="14" y="3" width="7" height="7"></rect>
-                    <rect x="14" y="14" width="7" height="7"></rect>
-                    <rect x="3" y="14" width="7" height="7"></rect>
-                </svg>
-            )
+            imageUrl: "/Apps.png"
         },
         {
             title: "Virtual Hackathon",
@@ -43,27 +40,14 @@ const ProgramHighlightsSection = () => {
             title: "AI Cheat Sheet",
             text: "Unlock the hacks, give you an edge to build services and product you can sell and start earning.",
             className: styles.card5,
-            icon: (
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={styles.icon}>
-                    <path d="M12 2v20"></path>
-                    <path d="m16 18 4-4-4-4"></path>
-                    <path d="m8 6-4 4 4 4"></path>
-                </svg>
-            )
+            imageUrl: "/light icon.png",
+            showArrow: true
         },
         {
             title: "Certificate of Participation",
             text: "Display your certificate on LinkedIn and have it on your Resume.",
             className: styles.card6,
-            icon: (
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={styles.icon}>
-                    <path d="M12 15V3"></path>
-                    <path d="M12 15C15 15 18 12 18 9C18 6 15 3 12 3C9 3 6 6 6 9C6 12 9 15 12 15Z"></path>
-                    <path d="M12 15L12 21"></path>
-                    <path d="M12 21L9 19"></path>
-                    <path d="M12 21L15 19"></path>
-                </svg>
-            )
+            imageUrl: "/Diploma.png"
         }
     ];
 
@@ -81,9 +65,12 @@ const ProgramHighlightsSection = () => {
                                     className={styles[`cardImage${index + 1}`]}
                                 />
                             )}
-                            {item.icon}
+                            {item.icon && item.icon}
                             <h3 className={styles.cardHeading}>{item.title}</h3>
                             <p className={styles.cardText}>{item.text}</p>
+                            {item.showArrow && (
+                                <img src="/Pixel Arrow straight.png" alt="arrow" className={styles.cardArrow} />
+                            )}
                         </div>
                     </div>
                 ))}
