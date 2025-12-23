@@ -1,8 +1,8 @@
 import Image from 'next/image'
-import {Navbar1} from "@/components/ui/navbar1"
+import Navbar1  from "../../components/ui/navbar1"
 
 
-export default function  Herosection(){
+export default function Herosection(){
     return (
        <>
 <section className=" hidden lg:block min-h-screen overflow-hidden bg-[#31091E] relative">
@@ -20,8 +20,7 @@ export default function  Herosection(){
   </div>
 
 <div className='relative z-10 flex flex-col min-h-screen'>
- 
-  <Navbar1/>
+ <Navbar1/> 
 <div className="mx-auto w-[1000px] h-[58px] bg-[#06061A]/50 rounded-[10px] px-8 flex items-center justify-center gap-4 shadow-[0px_0px_10px_0px_rgba(255,255,255,0.2)] backdrop-blur-sm">
   
               <div className="relative w-5 h-5 md:w-6 md:h-[25px] flex-shrink-0">
