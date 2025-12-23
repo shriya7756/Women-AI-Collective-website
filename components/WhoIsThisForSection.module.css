@@ -1,12 +1,13 @@
 .section {
-    width: 1440px;
+    width: 100%;
+    max-width: 1440px;
     height: 660px;
     margin: 0 auto;
-    padding: 120px 60px 120px 100px;
+    padding: 80px 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 110px;
+    gap: 60px;
     background: url('/Desktop - 2.png') no-repeat center center;
     background-size: cover;
     position: relative;
@@ -126,5 +127,44 @@
     .rightContent {
         width: 100%;
         justify-content: center;
+    }
+}
+
+@media (max-width: 640px) {
+    .section {
+        height: 720px;
+        padding: 60px 30px;
+        gap: 30px;
+    }
+
+    .leftContent {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .card {
+        gap: 12px;
+    }
+
+    .label {
+        width: 100%;
+        height: auto;
+        min-height: 50px;
+        font-size: 14px;
+        padding: 10px 16px;
+    }
+
+    .heading {
+        font-size: 24px;
+    }
+
+    .subHeading {
+        font-size: 16px;
+    }
+
+    .listItem {
+        font-size: 14px;
+        gap: 8px;
     }
 }
