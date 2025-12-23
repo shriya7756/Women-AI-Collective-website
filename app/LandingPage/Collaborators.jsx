@@ -136,11 +136,11 @@ function TestimonialCard({ item, delay }) {
       transition={{ duration: 0.6, delay }}
     className={`relative p-6 shadow-xl text-black ${item.color}`}
 >
-  <p className="font-hand text-[15px] leading-[1.6] mb-6">
+  <p className="font-indie text-[15px] leading-[1.6] mb-6">
     {item.text}</p>
-  <p className="font-hand text-[15px] leading-[1.6] mb-4">
+  <p className="font-indie text-[15px] leading-[1.6] mb-4">
   {item.text1}</p>
-<p className="font-hand text-[15px] leading-[1.6] mb-6">
+<p className="font-indie text-[15px] leading-[1.6] mb-6">
   {item.text2}</p>
   <h3 className="font-sans font-bold text-sm uppercase tracking-wide">
     {item.name}</h3>
