@@ -1,38 +1,37 @@
 "use client"
 import { useState } from "react"
-import {Button} from "@/components/ui/button"
-import Image from "next/image";
-export default function Footer(){
-    // controll form
-    const [email,setemail]=useState(" ");
-    
+import { Button } from "@/components/ui/button"
+import Image from "next/image"
+import { Instagram, Linkedin, Phone, Mail } from "lucide-react"
 
-    // onchange
-    const handleChange=(event)=>{
-        setemail(event.target.value)
-    };
-    //Submit
-    const handleSubmit=(event)=>{
-        event.preventDefault()
+export default function Footer() {
+  const [email, setEmail] = useState("")
+
+  const handleChange = (event) => {
+    setEmail(event.target.value)
+  }
+
+  const handleSubmit = (event) => {
+    event.preventDefault()
     console.log("Submitted email:", email)
-    }
+  }
 
-    return (
-        <>
-  <section className="flex flex-col w-full min-h-[500px] md:min-h-[600px] lg:h-[700px] bg-[#31091E]">
-      <div className="flex flex-col gap-8 md:gap-12 lg:gap-16">
-        {/* Stay Updated block */}
-        <div className="flex flex-col px-6 sm:px-12 md:px-16 lg:ml-[120px] w-full max-w-[90%] sm:max-w-md lg:w-[256px] pt-6 md:pt-8 lg:pt-4 pb-4 opacity-90">
-          <span className="font-work font-semibold text-[28px] sm:text-[32px] md:text-[36px] lg:text-[40px] leading-tight tracking-[-0.8px] text-[#F1247B]">
+  return (
+    <section className="relative w-full min-h-[700px] bg-[#31091E] px-6 sm:px-12 md:px-16 lg:px-24 py-12 overflow-hidden">
+      {/* Top Section - Stay Updated & Social Icons */}
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-start z-10 mb-6">
+        {/* Left - Stay Updated Form */}
+        <div className="flex flex-col w-full max-w-md">
+          <h2 className="font-bold text-[36px] sm:text-[40px] md:text-[48px] leading-tight text-[#F1247B] mb-2">
             Stay Updated
-          </span>
+          </h2>
 
-          <form onSubmit={handleSubmit} className="mt-4 flex flex-col gap-4">
+          <div className="flex flex-col">
             <label
               htmlFor="email"
-              className="text-[#FFFFFFCC] font-semibold text-[14px] sm:text-[16px] md:text-[18px]"
+              className="text-[#FFFFFFB3] font-medium text-[16px] sm:text-[18px]"
             >
-              Email Address:
+              email address
             </label>
 
             <input
@@ -40,38 +39,65 @@ export default function Footer(){
               id="email"
               value={email}
               onChange={handleChange}
-              placeholder="you@gmail.com"
-              className="text-white bg-transparent border-b border-white/30 outline-none pb-2 placeholder:text-white/50 focus:border-[#F1247B] transition-colors text-sm sm:text-base"
+              placeholder=""
+              className="text-white bg-transparent border-b-2 border-[#F1247B] outline-none pb-3 placeholder:text-white/50 focus:border-[#FF5FB2] transition-colors text-base sm:text-lg"
             />
 
-            <Button
-              type="submit"
-              className="relative border rounded-lg bg-[#FAFCFE] hover:bg-[#F1247B] hover:text-white py-4 sm:py-5 md:py-6 px-6 sm:px-7 md:px-8 pr-10 sm:pr-11 md:pr-12 text-[#F1247B] font-medium w-fit transition-colors text-sm sm:text-base"
+            <button
+              onClick={handleSubmit}
+              className="mt-4 bg-white hover:bg-gray-100 text-[#F1247B] font-semibold py-3 px-8 rounded-xl w-[150px] transition-colors flex items-center justify-center gap-2"
             >
               Submit
-              <Image
-                src="/Pixel Arrow.png"
-                width={16}
-                height={16}
-                alt="arrow"
-                className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 sm:w-5 sm:h-5"
-              />
-            </Button>
-          </form>
+              <img src="/Pixel Arrow.png" alt="arrow" className="w-4 h-4"/>
+            </button>
+          </div>
         </div>
 
-        {/* Big Text BELOW */}
-        <div className="flex flex-col items-center justify-center px-4 sm:px-8 md:px-12 lg:px-[50px] opacity-80 ">
-          <span className="font-bold text-[40px] xs:text-[50px] sm:text-[70px] md:text-[100px] lg:text-[140px] xl:text-[190px] text-[#ECF1F4] leading-none text-center">
-            WOMEN AI
-          </span>
-
-          <span className="font-bold text-[35px] xs:text-[45px] sm:text-[60px] md:text-[90px] lg:text-[130px] xl:text-[170px] text-[#ECF1F4] leading-none text-center">
-            COLLECTIVE
-          </span>
+        {/* Right - Social Icons */}
+        <div className="flex gap-4 md:gap-5 mt-6 md:mt-0">
+          <img src="/Instagram.png" alt="instagram" />
+          <img src="/LinkedIn.png" alt="LinkedIn"/>
+          <img src="/WhatsApp.png" alt="WhatsApp"/>
+          <img src="/Gmail Logo.png" alt="gmail"/>
         </div>
+      
+
+      {/* Middle Section - Program Links */}
+    <div className="flex flex-wrap text-white/90 md:justify-end gap-4 z-10 mb-1 mt-2">
+        <button className="font-normal text-sm sm:text-base hover:text-[#F1247B] transition-colors">
+          Artificial Intelligence 101
+        </button>
+        <span className="text-white/50">|</span>
+        <button className="font-normal text-sm sm:text-base hover:text-[#F1247B] transition-colors">
+          AI Accelerator for professionals
+        </button>
+      </div>
+
+      {/* Navigation Links */}
+      <div className="flex flex-wrap gap-6 md:justify-end z-10 mb-6 mt-1">
+        <button className="text-white/90 underline hover:text-[#F1247B] transition-colors text-sm sm:text-base">
+          About Us
+        </button>
+        <button className="text-white/90 underline hover:text-[#F1247B] transition-colors text-sm sm:text-base">
+          Contact Us
+        </button>
+        <button className="text-white/90 underline hover:text-[#F1247B] transition-colors text-sm sm:text-base">
+          FAQ
+        </button>
+        <button className="text-white/90 underline hover:text-[#F1247B] transition-colors text-sm sm:text-base">
+          Get Involved
+        </button>
+      </div>
+</div>
+      {/* Big Text - Positioned absolutely to overlap */}
+      <div className="absolute bottom-0 left-0 right-0 flex flex-col items-center justify-end pb-8 sm:pb-10 md:pb-12 lg:pb-16 opacity-30 pointer-events-none">
+        <h1 className="font-bold text-[60px] xs:text-[80px] sm:text-[100px] md:text-[140px] lg:text-[180px] xl:text-[220px] text-[#ECF1F4] leading-[0.85] text-center tracking-tight px-2">
+          WOMEN AI
+        </h1>
+        <h1 className="font-bold text-[50px] xs:text-[70px] sm:text-[90px] md:text-[120px] lg:text-[160px] xl:text-[200px] text-[#ECF1F4] leading-[0.85] text-center tracking-tight px-2">
+          COLLECTIVE
+        </h1>
       </div>
     </section>
-        </>
-    )
+  )
 }

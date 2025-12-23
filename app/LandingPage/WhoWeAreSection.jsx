@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import styles from "../../../waicwebsite/components/ui/"
+import styles from "../../components/ui/PillarsSection.module.css"
 
 export default function WhoWeAreSection() {
     const [isVisible, setIsVisible] = useState(false);
@@ -11,7 +11,7 @@ export default function WhoWeAreSection() {
     }, []);
 
     return (
-        <section className={styles.heroSection}>
+        <section className= {styles.heroSection}>
             <div className={styles.container}>
                 {/* First Section - Text Left, Image Right */}
                 <div className={`${styles.contentRow} ${isVisible ? styles.fadeIn : ''}`}>

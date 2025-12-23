@@ -1,4 +1,5 @@
-"use client";;
+"use client"
+
 import { Book, Menu, Sunset, Trees, Zap } from "lucide-react";
 import Image from 'next/image'
 import {
@@ -6,8 +7,8 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion";
-import { Button } from "@/components/ui/button";
+} from "../../components/ui/accordion";
+import { Button } from "../ui/button";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -15,14 +16,14 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
+} from "../ui/navigation-menu";
 import {
   Sheet,
   SheetContent,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/components/ui/sheet";
+} from "../ui/sheet";
 
 const Navbar1 = ({
   logo = {
@@ -46,7 +47,7 @@ const Navbar1 = ({
     },
     {
       title: "Program",
-      url: "#",
+      url: "./Program",
     },
     {
       title: "Contact",
@@ -225,4 +226,4 @@ const SubMenuLink = ({
   );
 };
 
-export { Navbar1 };
+export default Navbar1;
