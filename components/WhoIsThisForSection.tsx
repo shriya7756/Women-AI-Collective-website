@@ -5,12 +5,11 @@ const WhoIsThisForSection = () => {
     return (
         <section className={styles.section}>
             <div className={styles.leftContent}>
-                <div className={styles.card}>
-                    <div className={`${styles.label} ${styles.label1}`}>1. High school student..</div>
-                    <div className={`${styles.label} ${styles.label2}`}>2. College student..</div>
-                    <div className={`${styles.label} ${styles.label3}`}>3. Young professional..</div>
-                    <div className={`${styles.label} ${styles.label4}`}>4. Entrepreneurs..</div>
-                </div>
+                <img
+                    src="/Who is AI 101  for.jpg"
+                    alt="Who is AI 101 for"
+                    className={styles.forImage}
+                />
             </div>
 
             <div className={styles.rightContent}>
@@ -20,19 +19,19 @@ const WhoIsThisForSection = () => {
                 <ul className={styles.list}>
                     <li className={styles.listItem}>
                         <span className={styles.checkIcon}>✓</span>
-                        High school student planning your future career
+                        High school student trying to build real skills beyond textbooks and classes
                     </li>
                     <li className={styles.listItem}>
                         <span className={styles.checkIcon}>✓</span>
-                        College student wanting to stand out in job applications
+                        College student wanting to stand out in internships, job applications, freelance work or start earning on the side
                     </li>
                     <li className={styles.listItem}>
                         <span className={styles.checkIcon}>✓</span>
-                        Young professional looking to advance faster
+                        Young professional looking to save time and grow faster using AI
                     </li>
                     <li className={styles.listItem}>
                         <span className={styles.checkIcon}>✓</span>
-                        Entrepreneur seeking to scale your business with AI
+                        Small business owner or aspiring founder curious about using AI in practical, everyday ways to scale work or business
                     </li>
                 </ul>
             </div>

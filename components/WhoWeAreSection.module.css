@@ -129,7 +129,8 @@
     line-height: 100%;
     letter-spacing: -0.03em;
     text-transform: uppercase;
-    color: #06061A;
+    color: #4A4A68;
+;
     margin: 0;
 }
 
@@ -140,6 +141,7 @@
     line-height: 140%;
     letter-spacing: 0;
     color: #4A4A68;
+    
     margin: 0;
 }
 

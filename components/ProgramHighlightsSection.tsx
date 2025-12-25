@@ -32,7 +32,7 @@ const ProgramHighlightsSection = () => {
         },
         {
             title: "Virtual Hackathon",
-            text: "Build projects using AI tools in real time, collaborating and competing.",
+            text: "Unlock the hacks, give you an edge to build services and product you can sell and start earning..",
             className: styles.card4,
             imageUrl: "/Vector.png"
         },
@@ -68,7 +68,11 @@ const ProgramHighlightsSection = () => {
                             {item.icon && item.icon}
                             <h3 className={styles.cardHeading}>{item.title}</h3>
                             <p className={styles.cardText}>{item.text}</p>
-                            {item.showArrow && (
+                            {index === 4 ? (
+                                <svg width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg" className={styles.whiteArrow}>
+                                    <path d="M21.5 8.9375L34.0625 21.5L21.5 34.0625M8.9375 21.5H34.0625" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                </svg>
+                            ) : item.showArrow && (
                                 <img src="/Pixel Arrow straight.png" alt="arrow" className={styles.cardArrow} />
                             )}
                         </div>
