@@ -7,11 +7,13 @@ import Home from "./Home";
 import JoinUs from "./Joinu";
 import Footer from "../../components/ui/Footer"
 import FlagShip from "./Flagship";
+import MobileHeroSection from "./MobileHero";
 export default  function LandingPage(){
     
     return(
-        <>
+        < div className="bg-black">
       <Herosection/>
+      <MobileHeroSection/>
      <WhoWeAreSection/>
      <ImpactSection/>
      <PillarsSection/>
@@ -20,6 +22,6 @@ export default  function LandingPage(){
      <Collaborators/>
      <JoinUs/>
      <Footer/>
-        </>
+        </div>
     )
 }

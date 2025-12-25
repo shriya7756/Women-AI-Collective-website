@@ -64,7 +64,7 @@ const Navbar1 = ({
           mx-auto 
           items-center justify-space-between 
           max-w-[1200px] h-[52px]
-          pt-4 pr-40 pb-4 pl-40
+          pt-4  pb-4 pl-8
           rounded-[99px]
           bg-[rgba(236,241,244,0.03)]
           backdrop-blur-[10px]

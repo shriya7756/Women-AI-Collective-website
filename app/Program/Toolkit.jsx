@@ -5,32 +5,32 @@ export default function ToolsSection() {
     tools: [
       {
         name: "ChatGPT",
-        image: "./logos/chatgpt.png", // replace later
+        image: "/chatgpt.png", // replace later
         description: "Write assignments, generate ideas, and solve everyday study and work tasks."
       },
       {
         name: "Claude",
-        image: "./logos/claude.png",
+        image: "/calude.png",
         description: "Break down long readings and organize thoughts clearly."
       },
       {
         name: "Grok 3",
-        image: "./logos/grok.png",
+        image: "/grok.png",
         description: "Break down long readings and organize complex topics quickly."
       },
       {
         name: "Gemini",
-        image: "./logos/gemini.png",
+        image: "/gemini.png",
         description: "Google's multimodal AI to search smarter and understand complex topics."
       },
       {
         name: "Perplexity",
-        image: "./logos/perplexity.png",
+        image: "/perplexity.png",
         description: "Find reliable answers with fast, citation-based research."
       },
       {
         name: "DeepSeek",
-        image: "./logos/deepseek.png",
+        image: "/deepseek.png",
         description: "Get quick explanations, summaries, and problem-solving help."
       },
     ]
@@ -54,27 +54,28 @@ export default function ToolsSection() {
         {/* Container */}
         <div className="flex flex-col gap-10 ">
           {sections.map((sec, i) => (
-            <div key={i} className="bg-white text-black border border-white/10 rounded-6xl p-6 md:p-10">
+            <div key={i} className="bg-white text-black border border-white/10 rounded-[20px] p-6 md:p-10">
 
               {/* Section Title */}
-              <h3 className="text-lg md:text-xl font-bold mb-6 text-black">
+              <h3 className=" md:text-3xl font-Bold mb-6 text-black">
                 {sec.title}
               </h3>
 
               {/* FLEX WRAP: Free-flow card sizing */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-              {sec.tools.map((tool, index) => (
-                <div
-                  key={index}
-                  className="border border-[#EE71A8] rounded-xl bg-white/10 p-6 hover:bg-white/20 transition"
-                >
-                  <img src={tool.image} className="w-12 h-12 mx-auto mb-3" />
-                  <p className="text-sm text-gray-200 text-center leading-normal">
-                    {tool.description}
-                  </p>
-                </div>
-                ))}
-              </div>
+  {sec.tools.map((tool, index) => (
+    <div
+      key={index}
+      className="p-6 rounded-[30px] text-center transition
+                 border border-[#F1247B] bg-[#FAFCFE]
+                 shadow-[4px_4px_0px_0px_#E62376E5] hover:shadow-[6px_6px_0px_0px_#E62376E5]"
+    >
+      <img src={tool.image} className="w-auto h-10 mx-auto mb-3" alt={tool.name} />
+      <p className="text-sm text-[#333333] leading-normal">{tool.description}</p>
+    </div>
+  ))}
+</div>
+              
             </div>
           ))}
         </div>
