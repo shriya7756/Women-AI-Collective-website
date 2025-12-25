@@ -23,7 +23,8 @@
 .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    column-gap: 30px;
+    row-gap: 50px;
     width: 100%;
 }
 
@@ -48,7 +49,7 @@
 
 .card2 {
     width: 100%;
-    max-width: 320px;
+    max-width: 510px;
     height: 420px;
     opacity: 1;
     padding: 28.34px 21.25px;
@@ -58,6 +59,7 @@
     border-radius: 23.03px;
     background: #FFB0E2;
     justify-self: center;
+    position: relative;
 }
 
 .cardImage2 {
@@ -99,9 +101,9 @@
 
 .cardImage4 {
     width: calc(100% + 42.5px);
-    /* To cover horizontal padding */
     margin-left: -21.25px;
-    height: 220px;
+    height: 180px;
+    /* Reduced from 220px to make room for text */
     object-fit: cover;
 }
 
@@ -116,6 +118,7 @@
     background: url('/Frame 1171276338.png') no-repeat center center;
     background-size: cover;
     justify-self: center;
+    position: relative;
 }
 
 .card6 {
@@ -199,12 +202,37 @@
     vertical-align: middle;
 }
 
-.card5 .cardHeading,
+.card5 .cardHeading {
+    color: #ECF1F4;
+    z-index: 2;
+    position: absolute;
+    width: 282px;
+    height: 47px;
+    top: 172.18px;
+    left: 28.34px;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 100%;
+    letter-spacing: -2%;
+    display: flex;
+    align-items: center;
+}
+
 .card5 .cardText {
     color: #ECF1F4;
-
     z-index: 2;
-    position: relative;
+    position: absolute;
+    width: 360px;
+    height: 75px;
+    top: 231.18px;
+    left: 28.66px;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    display: flex;
+    align-items: center;
 }
 
 .card6 .cardHeading,
@@ -233,9 +261,17 @@
     height: 100%;
 }
 
+.cardImage5 {
+    width: 80.22002410888672px;
+    height: 90.25373840332031px;
+    object-fit: contain;
+    position: absolute;
+    top: 44.39px;
+    left: 24.36px;
+}
+
 .cardImage1,
 .cardImage3,
-.cardImage5,
 .cardImage6 {
     width: 80px;
     height: 80px;
@@ -243,11 +279,14 @@
     margin-bottom: 20px;
 }
 
-.cardArrow {
-    width: 24px;
-    height: 24px;
-    margin-top: auto;
-    align-self: flex-start;
+.whiteArrow {
+    width: 42.50922393798828px;
+    height: 42.50922393798828px;
+    opacity: 1;
+    position: absolute;
+    top: 338.3px;
+    left: 24.8px;
+    display: block;
 }
 
 @media (max-width: 1024px) {
