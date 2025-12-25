@@ -96,9 +96,16 @@ export default function FlagShip() {
                 A 2-months live program for young women from both non-tech and tech backgrounds become AI-Literate and AI-Fluent. It covers practical usecases and frameworks along with fundamentals of AI and ML setting them up for career advancement and higher paying opportunities in an AI-driven economy.
               </p>
               
-              <Button className="bg-[#ECF1F4] hover:bg-[#dce1e4] w-fit px-8 py-6">
-                <span className="font-medium text-base sm:text-lg text-[#4A4A68]">Join the Program</span>
-              </Button>
+            <Button className="group bg-[#ECF1F4] hover:bg-[#dce1e4] rounded-[10px] w-[250px] px-8 py-6 flex items-center gap-2">
+  <span className="flex items-center gap-2 font-medium text-base sm:text-lg text-[#4A4A68]">
+    Join the Program
+    <img
+      src="/Pixel Arrow straight.png"
+      alt="Arrow"
+      className="w-7 h-7 transition-transform duration-300 group-hover:rotate-15"
+    />
+  </span>
+</Button>
             </div>
           </div>
 
@@ -134,9 +141,16 @@ export default function FlagShip() {
                 A 2-months live program for young women from both non-tech and tech backgrounds become AI-Literate and AI-Fluent. It covers practical usecases and frameworks along with fundamentals of AI and ML setting them up for career advancement and higher paying opportunities in an AI-driven economy.
               </p>
               
-              <Button className="bg-[#ECF1F4] hover:bg-[#dce1e4] w-fit px-8 py-6">
-                <span className="font-medium text-base sm:text-lg text-[#4A4A68]">Coming Soon</span>
-              </Button>
+              <Button className="group bg-[#ECF1F4] hover:bg-[#dce1e4] rounded-[10px] w-[200px] px-8 py-6 flex items-center gap-2">
+  <span className="flex items-center gap-2 font-medium text-base sm:text-lg text-[#4A4A68]">
+   Coming Soon
+    <img
+      src="/Pixel Arrow straight.png"
+      alt="Arrow"
+      className="w-7 h-7 transition-transform duration-300"
+    />
+  </span>
+</Button>
             </div>
           </div>
         </div>

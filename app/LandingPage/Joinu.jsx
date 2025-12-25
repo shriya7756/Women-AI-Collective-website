@@ -26,9 +26,9 @@ export default function JoinUs(){
         ARE YOU UP FOR IT?
       </h1>
 
-      <button className="mt-8 px-8 py-4 border rounded-lg bg-pink-500 font-bold hover:bg-pink-600 transition">
-        <span className="text-white">JOIN THE AI PROGRAM</span>
-      </button>
+     <button className="mt-8 px-8 py-4 w-[300px] h-[50px] border rounded-[20px] bg-pink-500 text-xl font-bold hover:bg-pink-600 transition shadow-lg hover:shadow-xl flex items-center justify-center">
+  <span className="text-white">JOIN THE AI PROGRAM</span>
+</button>
     </div>
   )
 }

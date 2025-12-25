@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { Navbar1 } from "@/components/ui/navbar1"
+import  Navbar1  from "@/components/ui/navbar1"
 
 export default function MobileHeroSection() {
   return (
