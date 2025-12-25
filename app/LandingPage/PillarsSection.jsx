@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import styles from '@/components/ui/PillarsSection.module.css';
+import styles from '../LandingPage/PillarsSection.module.css';
 
 const pillars = [
     {

@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import styles from "../../components/ui/PillarsSection.module.css"
+import styles from "../LandingPage/PillarsSection.module.css"
 
 export default function WhoWeAreSection() {
     const [isVisible, setIsVisible] = useState(false);

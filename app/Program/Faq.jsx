@@ -55,45 +55,46 @@ const faqData = [
 
 function AccordionItem({ question, answer, isOpen, onClick }) {
   return (
-    <div 
-      className="bg-transparent overflow-hidden transition-all duration-300 ease-out"
-      style={{ 
-        width: '1000px',
-        minHeight: '102px',
-        border: '1px solid rgba(236, 241, 244, 0.3)',
-        borderRadius: '20px',
-        marginBottom: '12px'
-      }}
+    <div
+      className="
+        w-full max-w-[1000px] bg-transparent border border-white/20 rounded-2xl mb-4
+        transition-all duration-300 overflow-hidden
+      "
     >
+      {/* Question Button */}
       <button
         onClick={onClick}
-        className="w-full flex items-center justify-between text-left transition-all duration-300 ease-out hover:bg-white/5"
-        style={{
-          padding: '24px 30px',
-          gap: '24px'
-        }}
+        className="
+          w-full flex items-center justify-between text-left
+          hover:bg-white/5 px-6 md:px-8 py-5
+          transition-all duration-300
+        "
       >
-        <span className="text-lg font-semibold text-white pr-4">{question}</span>
-        <ChevronDown 
-          className={`w-6 h-6 text-white/70 flex-shrink-0 transition-transform duration-300 ease-out ${
-            isOpen ? 'rotate-180' : ''
+        <span className="text-base md:text-lg font-semibold text-white pr-4">
+          {question}
+        </span>
+
+        <ChevronDown
+          className={`w-6 h-6 text-white/70 transition-transform duration-300 ${
+            isOpen ? "rotate-180" : ""
           }`}
         />
       </button>
+
+      {/* Answer */}
       <div
-        className={`overflow-hidden transition-all duration-300 ease-out ${
-          isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+        className={`transition-all duration-300 overflow-hidden ${
+          isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <div 
-          className="text-white/80 leading-relaxed"
-          style={{
-            padding: '0 30px 24px 30px',
-            borderTop: '1px solid rgba(236, 241, 244, 0.2)'
-          }}
+        <p
+          className="
+            text-white/80 leading-relaxed border-t border-white/10
+            px-6 md:px-8 py-5
+          "
         >
           {answer}
-        </div>
+        </p>
       </div>
     </div>
   );
@@ -102,66 +103,40 @@ function AccordionItem({ question, answer, isOpen, onClick }) {
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState(null);
 
-  const toggleAccordion = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
+  const toggleAccordion = (i) => {
+    setOpenIndex(openIndex === i ? null : i);
   };
 
   return (
-    <div 
-      className="min-h-screen flex items-center justify-center"
-      style={{
-        width: '1440px',
-        minHeight: '1946px',
-        paddingTop: '120px',
-        paddingRight: '60px',
-        paddingBottom: '120px',
-        paddingLeft: '60px',
-        margin: '0 auto',
-        background: '#0a0a0f'
-      }}
-    >
-      <div 
-        className="flex flex-col items-center w-full"
-        style={{
-          gap: '100px'
-        }}
-      >
-        <div 
-          className="text-center font-bold"
-          style={{
-            width: '496px',
-            minHeight: '10px',
-            display: 'flex',
-            flexDirection: 'column',
-            gap: '10px'
-          }}
-        >
-          <h2 className="text-5xl font-bold text-white mb-0" style={{ letterSpacing: '0.02em' }}>
+    <section className="bg-[#0a0a0f] py-20 px-6 md:px-12 lg:px-20">
+      <div className="max-w-6xl mx-auto flex flex-col items-center gap-20">
+        
+        {/* Heading */}
+        <div className="text-center space-y-3 max-w-xl">
+          <h2 className="text-4xl md:text-5xl font-bold text-white">
             GOT QUESTIONS?
           </h2>
-          <p className="text-base text-white/70">
-            For any query contact at{' '}
-            <a 
-              href="mailto:womenaicollective@gmail.com" 
-              className="text-white hover:text-white/90 "
-            >
+          <p className="text-white/70 text-sm md:text-base">
+            For any query contact at{" "}
+            <a href="mailto:womenaicollective@gmail.com" className="underline hover:text-white">
               womenaicollective@gmail.com
             </a>
           </p>
         </div>
 
-        <div className="flex flex-col items-center w-full">
-          {faqData.map((item, index) => (
+        {/* FAQ LIST */}
+        <div className="w-full flex flex-col items-center">
+          {faqData.map((item, i) => (
             <AccordionItem
-              key={index}
+              key={i}
               question={item.question}
               answer={item.answer}
-              isOpen={openIndex === index}
-              onClick={() => toggleAccordion(index)}
+              isOpen={openIndex === i}
+              onClick={() => toggleAccordion(i)}
             />
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }

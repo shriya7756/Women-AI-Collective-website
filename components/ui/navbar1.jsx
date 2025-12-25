@@ -34,7 +34,7 @@ const Navbar1 = ({
   },
 
   menu = [
-    { title: "Home", url: "#" },
+    { title: "Home", url: "./LandingPage" },
     {
       title: "About",
       url: "#",
