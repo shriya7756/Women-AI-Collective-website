@@ -1,10 +1,8 @@
 // app/LandingPage/layout.jsx
-export default function RootLayout({ children }) {
+export default function LandingPageLayout({ children }) {
   return (
-    <html lang="en">
-      <body>
-        {children}
-      </body>
-    </html>
+    <div>
+      {children}
+    </div>
   );
 }

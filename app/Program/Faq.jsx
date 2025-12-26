@@ -57,8 +57,8 @@ function AccordionItem({ question, answer, isOpen, onClick }) {
   return (
     <div
       className="
-        w-full max-w-[1000px] bg-transparent border border-white/20 rounded-2xl mb-4
-        transition-all duration-300 overflow-hidden
+        w-full max-w-[1000px] bg-transparent border border-white/20 rounded-[20px] mb-4
+        transition-all duration-300 overflow-hidden 
       "
     >
       {/* Question Button */}
@@ -113,12 +113,12 @@ export default function FAQ() {
         
         {/* Heading */}
         <div className="text-center space-y-3 max-w-xl">
-          <h2 className="text-4xl md:text-5xl font-bold text-white">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#FAFCFE]">
             GOT QUESTIONS?
           </h2>
-          <p className="text-white/70 text-sm md:text-base">
+          <p className="text-[#ECF1F4] text-sm md:text-base">
             For any query contact at{" "}
-            <a href="mailto:womenaicollective@gmail.com" className="underline hover:text-white">
+            <a href="mailto:womenaicollective@gmail.com" className=" hover:text-white">
               womenaicollective@gmail.com
             </a>
           </p>

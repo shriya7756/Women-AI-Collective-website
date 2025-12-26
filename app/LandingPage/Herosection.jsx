@@ -105,7 +105,8 @@ export default function Herosection(){
       </Button>
 
  </div>
-</div>
+ </div>
+<div className="bg-gradient-to-b from-[#9B0F52] to-[#0A0212]  h-[100px]"></div>
 </section>
 
         </>
