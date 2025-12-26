@@ -3,7 +3,7 @@
     min-height: 1200px;
     background: url('/img_rectangle_5.png') no-repeat center center,
         url('/Rectangle 6.png') no-repeat center center,
-        #06061A;
+        black;
     background-size: cover;
     display: flex;
     flex-direction: column;
