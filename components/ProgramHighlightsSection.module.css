@@ -90,11 +90,12 @@
     height: 420px;
     opacity: 1;
     border-radius: 23.03px;
-    padding: 0 21.25px 40px;
-    /* Removed top padding */
+    padding: 0 21.25px 30px;
+    /* Reduced bottom padding */
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 16px;
+    /* Reduced gap */
     justify-self: center;
     overflow: hidden;
 }
@@ -180,14 +181,16 @@
 
 .card4 .cardHeading {
     color: var(--Grey-900, #363A44);
-    width: 292px;
-    height: 94px;
+    width: 100%;
+    max-width: 292px;
     opacity: 1;
     font-family: Work Sans;
     font-weight: 600;
     font-style: normal;
-    font-size: 40px;
-    line-height: 100%;
+    font-size: 36px;
+    /* Reduced from 40px */
+    line-height: 110%;
+    /* Increased from 100% for better readability */
     letter-spacing: -2%;
     vertical-align: middle;
 }
@@ -196,7 +199,8 @@
     font-family: Work Sans;
     font-weight: 400;
     font-style: normal;
-    font-size: 18px;
+    font-size: 16px;
+    /* Reduced from 18px */
     line-height: 140%;
     letter-spacing: 0%;
     vertical-align: middle;
@@ -225,7 +229,8 @@
     position: absolute;
     width: 360px;
     height: 75px;
-    top: 231.18px;
+    top: 242px;
+    
     left: 28.66px;
     font-family: 'Work Sans', sans-serif;
     font-weight: 400;
