@@ -17,14 +17,18 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  width: 100%;
+}
+
 body {
   font-family: 'Work Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: var(--color-light);
   color: var(--color-dark);
-}
-
-html {
-  scroll-behavior: smooth;
+  overflow-x: hidden;
+  width: 100%;
 }

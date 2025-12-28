@@ -195,12 +195,18 @@
 }
 
 .pillarImage {
-    width: 100%;
-    height: auto;
+    left: 100px;
+    top: 1000px;
+    width: 100px;
+    height: 100px;
     display: block;
 }
 
 @media (max-width: 1400px) {
+    .pillarsWrapper {
+        padding: 120px 40px 80px;
+    }
+
     .dottedRectangle {
         width: 100%;
         max-width: 1300px;
@@ -227,5 +233,54 @@
     .pillarImageContainer {
         flex: 0 0 auto;
         width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .pillarsWrapper {
+        padding: 80px 20px 60px;
+    }
+
+    .dottedRectangle {
+        padding: 30px 20px;
+    }
+
+    .heading {
+        font-size: 36px;
+    }
+
+    .pillarTitle {
+        font-size: 32px;
+    }
+
+    .pillarText {
+        font-size: 16px;
+    }
+
+    .pillarsGrid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pillarsWrapper {
+        padding: 60px 16px 40px;
+    }
+
+    .dottedRectangle {
+        padding: 20px 16px;
+    }
+
+    .heading {
+        font-size: 28px;
+    }
+
+    .pillarTitle {
+        font-size: 24px;
+    }
+
+    .pillarText {
+        font-size: 15px;
     }
 }
