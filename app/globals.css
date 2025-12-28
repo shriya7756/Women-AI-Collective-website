@@ -130,24 +130,7 @@
   50% { transform: rotate(6deg); }
 }
 
-.conic-right {
-  background: conic-gradient(
-    from -90deg at 50% 50%,
-    #F8F8F8 0deg,
-    #000000 0deg,
-    #AAAAAA 356.4deg,
-    #F8F8F8 360deg
-  );
-  mix-blend-mode: color-dodge;
-}
+html {
 
-.conic-left {
-  background: conic-gradient(
-    from 90deg at 50% 50%,
-    #F8F8F8 0deg,
-    #000000 0deg,
-    #AAAAAA 356.4deg,
-    #F8F8F8 360deg
-  );
-  mix-blend-mode: color-dodge;
+
 }

@@ -1,6 +1,8 @@
-import { Geist, Geist_Mono } from "next/font/google";
-import { Poppins, Patrick_Hand } from 'next/font/google';
+import { Geist, Geist_Mono ,Fraunces,Indie_Flower} from "next/font/google";
+import { Poppins, Patrick_Hand,  } from 'next/font/google';
 import "./globals.css";
+
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,11 +30,23 @@ const patrick = Patrick_Hand({
   variable: '--font-patrick',
 });
 
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  variable: "--font-fraunces",
+  display: "swap",
+});
+const indie = Indie_Flower({
+  subsets: ["latin"],
+  variable: "--font-indie",
+  weight: "400",
+  display: "swap",
+});
+
 export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} ${patrick.variable}`}
+      className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} ${patrick.variable} ${fraunces.variable} ${indie.variable}`}
     >
       <body className="antialiased">
         {children}
