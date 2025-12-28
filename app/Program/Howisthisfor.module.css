@@ -8,7 +8,7 @@
     align-items: center;
     justify-content: center;
     gap: 60px;
-    background: url('public/Desktop - 2.png') no-repeat center center;
+    background: url('/Desktop - 2.png') no-repeat center center;
     background-size: cover;
     position: relative;
     overflow: hidden;
@@ -21,58 +21,25 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #333333;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.forImage {
+    width: 430px;
+    height: 420px;
+    object-fit: cover;
     border-radius: 20px;
 }
 
-.card {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: 100%;
-    padding: 20px;
-}
 
-.label {
-    width: 320px;
-    height: 60px;
-    padding: 16px 24px;
-    border-radius: 20px;
-    font-family: 'Work Sans', sans-serif;
-    font-weight: 700;
-    font-size: 18px;
-    color: #333333;
-    text-align: left;
-    display: flex;
-    align-items: center;
-}
-
-.label1 {
-    transform: rotate(-2deg);
-    background-color: #FAFCFE;
-}
-
-.label2 {
-    transform: rotate(4deg);
-    background-color: #FFE5B4;
-}
-
-.label3 {
-    transform: rotate(-1deg);
-    background-color: #F1247B;
-    color: #FAFCFE;
-}
-
-.label4 {
-    transform: rotate(3deg);
-    background-color: #FAFCFE;
-}
 
 .rightContent {
-    flex: 1;
+    width: 592px;
+    height: 309px;
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 14px;
 }
 
 .subHeading {
