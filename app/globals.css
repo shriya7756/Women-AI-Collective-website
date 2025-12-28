@@ -1,7 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@custom-variant dark (&:is(.dark *));
+
 
 @theme inline {
   --color-background: var(--background);
@@ -127,4 +128,26 @@
 @keyframes wiggle {
   0%, 100% { transform: rotate(12deg); }
   50% { transform: rotate(6deg); }
+}
+
+.conic-right {
+  background: conic-gradient(
+    from -90deg at 50% 50%,
+    #F8F8F8 0deg,
+    #000000 0deg,
+    #AAAAAA 356.4deg,
+    #F8F8F8 360deg
+  );
+  mix-blend-mode: color-dodge;
+}
+
+.conic-left {
+  background: conic-gradient(
+    from 90deg at 50% 50%,
+    #F8F8F8 0deg,
+    #000000 0deg,
+    #AAAAAA 356.4deg,
+    #F8F8F8 360deg
+  );
+  mix-blend-mode: color-dodge;
 }

@@ -126,7 +126,7 @@ const Navbar1 = ({
             </SheetTrigger>
             <SheetContent 
               className="overflow-y-auto
-                bg-[rgba(236,241,244,0.03)]
+                
                 backdrop-blur-[10px]
                 border-l border-[rgba(255,255,255,0.18)]"
             >

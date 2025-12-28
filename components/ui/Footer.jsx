@@ -21,7 +21,7 @@ export default function Footer() {
        <img
     src="/footer-graphic.png"
     alt="footer graphic"
-    className="absolute bottom-0 left-0 w-full h-auto object-cover opacity-9 pointer-events-none"
+    className="absolute bottom-0 left-0 w-full h-auto object-cover opacity-10 pointer-events-none"
     style={{ zIndex: 0 }}
   />
       {/* Top Section - Stay Updated & Social Icons */}

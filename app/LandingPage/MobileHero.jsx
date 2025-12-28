@@ -1,19 +1,22 @@
 import Image from 'next/image'
 import  Navbar1  from "@/components/ui/navbar1"
+import "app/globals.css"
 
 export default function MobileHeroSection() {
   return (
     <section className="min-h-screen overflow-hidden bg-[#31091E] relative lg:hidden">
       {/* Background gradient */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/pink light gradient.png"
-          width={1000}
-          height={1000}
-          alt="gradient"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-      </div>
+    <div className="relative w-[375px] h-[812px] mx-auto overflow-hidden">
+  
+  {/* Main background gradient */}
+  <div className="absolute inset-0 bg-gradient-to-b from-[#31091E] via-transparent to-[#31091E]" />
+
+  {/* LEFT conic gradient */}
+  <div className="absolute top-0 left-0 w-[188px] h-full mix-blend-color-dodge conic-left" />
+
+  {/* RIGHT conic gradient */}
+  <div className="absolute top-0 right-0 w-[188px] h-full mix-blend-color-dodge conic-right" />
+       
 
       <div className="relative z-10 flex flex-col min-h-screen">
         {/* Navbar */}
@@ -61,29 +64,29 @@ export default function MobileHeroSection() {
             <span className="block font-normal text-2xl leading-tight text-[#FAFCFE] mb-1">
               We are on a mission
             </span>
-            <span className="block font-normal text-2xl leading-tight text-[#FAFCFE] mb-1">
-              to Empower
+            <span className="block font-normal text-2xl leading-tight text-[#FAFCFE] ">
+              to Empower  {" "}
+              <span className="relative inline-block italic font-semibold text-2xl leading-tight text-[#FAFCFE]">
+                Young
+              {" "}
+              </span>
             </span>
 
             <div className="flex flex-wrap justify-center items-center gap-2 mb-1">
-              <span className="relative inline-block italic font-semibold text-2xl leading-tight text-[#FAFCFE]">
-                Young
-              
-              </span>
               
               <span className="relative inline-block italic font-semibold text-2xl leading-tight text-[#FAFCFE]">
                 Women
-              
               </span>
-            </div>
-
-            <span className="block font-semibold text-2xl leading-tight text-[#FAFCFE]">
+               <span className="block font-semibold text-2xl leading-tight text-[#FAFCFE]">
               Build{' '}
               <span className="relative inline-block italic font-semibold text-2xl leading-tight text-[#FAFCFE]">
                 Careers
               
               </span>
             </span>
+            </div>
+
+           
             <span className="block font-semibold text-2xl leading-tight text-[#FAFCFE]">
               of the Future
             </span>
@@ -98,6 +101,7 @@ export default function MobileHeroSection() {
           <button className="h-12 px-6 bg-[#F1247B] hover:bg-[#d91f69] active:bg-[#c11a5e] transition-colors font-bold text-base text-[#FFFFFF] rounded-[10px] shadow-lg w-full max-w-xs">
             JOIN THE AI 101 PROGRAM
           </button>
+        </div>
         </div>
       </div>
     </section>
