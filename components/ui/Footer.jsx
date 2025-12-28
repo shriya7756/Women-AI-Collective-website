@@ -17,11 +17,11 @@ export default function Footer() {
   }
 
   return (
-    <section className="relative w-full min-h-[700px] bg-[#31091E] px-6 sm:px-12 md:px-16 lg:px-24 py-12 overflow-hidden">
+    <section className="relative w-full min-h-[600px] sm:min-h-[600px] md:min-h-[700px] bg-[#31091E] px-4 sm:px-10 md:px-16 lg:px-24 py-6 sm:py-8 md:py-10 overflow-hidden">
        <img
     src="/footer-graphic.png"
     alt="footer graphic"
-    className="absolute bottom-0 left-0 w-full h-auto object-cover opacity-10 pointer-events-none"
+    className="absolute bottom-10 left-0 w-600 h-auto object-cover opacity-12 pointer-events-none"
     style={{ zIndex: 0 }}
   />
       {/* Top Section - Stay Updated & Social Icons */}

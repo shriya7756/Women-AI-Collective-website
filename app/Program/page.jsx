@@ -1,5 +1,5 @@
 import Faq from "./Faq";
-import Home from "../LandingPage/Home"
+import Home from "../LandingPage/tetimonal"
 import Footer from "../../components/ui/Footer"
 import Herosection from "../Program/Herosection";
 import HowDifferentSection from "./HowDiffrentSection";

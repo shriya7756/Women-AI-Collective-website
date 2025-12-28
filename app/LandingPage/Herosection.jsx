@@ -1,17 +1,25 @@
 import Image from 'next/image'
 import Navbar1  from "../../components/ui/navbar1"
 import {Button} from "../../components/ui/button"
+import { Fraunces } from "next/font/google";
+
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  weight: ["400"],      // regular + bold
+  style: [ "italic"], // include italic
+  display: "swap",
+});
 
 export default function Herosection(){
     return (
        <>
-<section className=" hidden lg:block min-h-screen overflow-hidden bg-[#31091E] relative">
+<section className=" hidden lg:block min-h-screen overflow-hidden  relative">
   {/*background gradient */}
   <div className='absolute inset-0 z-0'>
 
    {/*Image positioned absolutely */}
     <Image
-      src="/pink light gradient.png"
+      src="/Light gradient bg.png"
       width={1000}
       height={100}
       alt="gradient"
@@ -59,7 +67,7 @@ export default function Herosection(){
     We are on a Mission to Empower {" "}
   </span>
 
-  <span className="relative inline-block italic font-semibold text-xl sm:text-4xl md:text-5xl lg:text-[60px] leading-tight text-[#FAFCFE] " >
+  <span className={`${fraunces.className} relative font-Fraunces inline-block italic font-semibold text-xl sm:text-4xl md:text-5xl lg:text-[60px] leading-tight text-[#FAFCFE] `} >
     Young 
      <Image 
     src="/Vector 1.png" 
@@ -70,8 +78,8 @@ export default function Herosection(){
   />
      {" "}
   </span>
-  <span className="relative inline-block italic font-semibold text-xl sm:text-4xl md:text-5xl lg:text-[60px] leading-tight text-[#FAFCFE]" >
-    women
+  <span className={`${fraunces.className} relative  inline-block italic font-semibold text-xl sm:text-4xl md:text-5xl lg:text-[60px] leading-tight text-[#FAFCFE]`} >
+    Women
      <Image 
     src="/Vector 2.png" 
     width={176}       // match Figma width
@@ -83,8 +91,8 @@ export default function Herosection(){
 
   <span className="block md:inline font-semibold text-xl sm:text-4xl md:text-5xl lg:text-[60px] leading-tight md:leading-[70px] text-[#FAFCFE]">
     {" " }  Build  {" "}
-    <span className="relative inline-block italic font-semibold text-xl sm:text-4xl md:text-5xl lg:text-[60px] leading-tight text-[#FAFCFE]">
-    Carrer
+    <span className={` ${fraunces.className}  relative font-Fraunces inline-block italic font-semibold text-xl sm:text-4xl md:text-5xl lg:text-[60px] leading-tight text-[#FAFCFE]`}>
+    Carrers
       <Image 
       src="/Vector 3.png" 
      width={176}       // match Figma width
