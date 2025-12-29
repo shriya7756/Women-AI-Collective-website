@@ -1,0 +1,367 @@
+.section {
+    width: 100%;
+    max-width: 1440px;
+    min-height: 1329px;
+    margin: 0 auto;
+    padding: 120px 60px;
+    background-color: #06061A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 140px;
+}
+
+.heading {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    color: #FAFCFE;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+    row-gap: 50px;
+    width: 100%;
+}
+
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card1 {
+    background: #F5C939;
+    width: 100%;
+    max-width: 360px;
+    height: 420px;
+    opacity: 1;
+    padding: 70px 21.25px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 23.03px;
+    justify-self: center;
+}
+
+.card2 {
+    width: 100%;
+    max-width: 510px;
+    height: 420px;
+    opacity: 1;
+    padding: 28.34px 21.25px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border-radius: 23.03px;
+    background: #FFB0E2;
+    justify-self: center;
+    position: relative;
+}
+
+.cardImage2 {
+    width: 277.49px;
+    height: 197px;
+    border-radius: 14.17px;
+    object-fit: cover;
+}
+
+.card3 {
+    width: 100%;
+    max-width: 300px;
+    height: 420px;
+    opacity: 1;
+    padding: 70px 21.25px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 14.17px;
+    border-radius: 23.03px;
+    background: linear-gradient(53.73deg, #E62376 45.09%, #FFFFFF 99.12%);
+    justify-self: center;
+}
+
+.card4 {
+    background: #FFFFFF;
+    width: 100%;
+    max-width: 350px;
+    height: 420px;
+    opacity: 1;
+    border-radius: 23.03px;
+    padding: 0 ;
+    /* Reduced bottom padding */
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    /* Reduced gap */
+    justify-self: center;
+    overflow: hidden;
+}
+
+.cardImage4 {
+ width: 100%;
+  height: auto;       /* or whatever height the card needs */
+  object-fit: cover;   /* fills width + height without distortion */
+  object-position: center; /* keeps the important part centered */
+  display: block;
+  margin-bottom: 15px;
+  gap: 4px,10px;
+}
+
+/* Virtual Hackathon card in image has white bottom */
+.card5 {
+    width: 100%;
+    max-width: 510px;
+    height: 420px;
+    opacity: 1;
+    border-radius: 23.03px;
+    box-shadow: 0px 0.89px 19.04px 0px #FFFFFF14;
+    background: url('/Frame 1171276338.png') no-repeat center center;
+    background-size: cover;
+    justify-self: center;
+    position: relative;
+}
+
+.card6 {
+    width: 100%;
+    max-width: 300px;
+    height: 420px;
+    opacity: 1;
+    padding: 70px 21.25px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 14.17px;
+    border-radius: 23.03px;
+    background: #8A38F5;
+    justify-self: center;
+}
+
+.icon {
+    width: 122px;
+    height: 122px;
+    opacity: 1;
+    margin-bottom: auto;
+}
+
+.cardHeading {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.2;
+}
+
+.cardText {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+/* Light text for dark cards, dark text for light cards */
+/* Specific text colors based on backgrounds */
+.card1 .cardHeading,
+.card1 .cardText,
+.card1 .icon {
+    color: #333333;
+}
+
+.card2 .cardHeading,
+.card2 .cardText {
+    color: #333333;
+    ;
+    z-index: 2;
+    position: relative;
+}
+
+.card3 .cardHeading,
+.card3 .cardText {
+    color: #ECF1F4;
+
+}
+
+.card4 .cardHeading {
+    color: var(--Grey-900, #363A44);
+    width: 100%;
+    max-width: 292px;
+    opacity: 1;
+    font-family: Work Sans;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 36px;
+    /* Reduced from 40px */
+    line-height: 110%;
+    /* Increased from 100% for better readability */
+    letter-spacing: -2%;
+    vertical-align: middle;
+}
+
+.card4 .cardText {
+    font-family: Work Sans;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    /* Reduced from 18px */
+    line-height: 140%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+}
+
+.card5 .cardHeading {
+    color: #ECF1F4;
+    z-index: 2;
+    position: absolute;
+    width: 282px;
+    height: 47px;
+    top: 172.18px;
+    left: 28.34px;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 100%;
+    letter-spacing: -2%;
+    display: flex;
+    align-items: center;
+}
+
+.card5 .cardText {
+    color: #ECF1F4;
+    z-index: 2;
+    position: absolute;
+    width: 360px;
+    height: 75px;
+    top: 242px;
+
+    left: 28.66px;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    display: flex;
+    align-items: center;
+}
+
+.card6 .cardHeading,
+.card6 .cardText {
+    color: #ECF1F4;
+
+}
+
+.cardImageBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+}
+
+.cardContent {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    height: 100%;
+}
+
+.cardImage5 {
+    width: 80.22002410888672px;
+    height: 90.25373840332031px;
+    object-fit: contain;
+    position: absolute;
+    top: 44.39px;
+    left: 24.36px;
+}
+
+.cardImage1,
+.cardImage3,
+.cardImage6 {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+.whiteArrow {
+    width: 42.50922393798828px;
+    height: 42.50922393798828px;
+    opacity: 1;
+    position: absolute;
+    top: 338.3px;
+    left: 24.8px;
+    display: block;
+}
+
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .section {
+        padding: 80px 30px;
+        gap: 80px;
+        min-height: auto;
+    }
+
+    .heading {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 640px) {
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .section {
+        padding: 60px 20px;
+        gap: 60px;
+    }
+
+    .heading {
+        font-size: 28px;
+    }
+
+    .card1,
+    .card2,
+    .card3,
+    .card4,
+    .card5,
+    .card6 {
+        max-width: 100%;
+        height: auto;
+        min-height: 350px;
+    }
+
+    .cardHeading {
+        font-size: 24px;
+    }
+
+    .cardText {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+        padding: 60px 16px;
+    }
+
+    .heading {
+        font-size: 24px;
+    }
+
+    .cardHeading {
+        font-size: 20px;
+    }
+
+    .cardText {
+        font-size: 14px;
+    }
+}
