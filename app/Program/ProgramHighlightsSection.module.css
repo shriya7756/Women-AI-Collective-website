@@ -90,7 +90,7 @@
     height: 420px;
     opacity: 1;
     border-radius: 23.03px;
-    padding: 0 ;
+    padding: 0;
     /* Reduced bottom padding */
     display: flex;
     flex-direction: column;
@@ -195,6 +195,7 @@
     /* Increased from 100% for better readability */
     letter-spacing: -2%;
     vertical-align: middle;
+    padding: 6 3px
 }
 
 .card4 .cardText {
@@ -206,6 +207,7 @@
     line-height: 140%;
     letter-spacing: 0%;
     vertical-align: middle;
+    padding:12px
 }
 
 .card5 .cardHeading {
