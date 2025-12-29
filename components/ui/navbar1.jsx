@@ -85,7 +85,7 @@ const Navbar1 = ({
           </a>
 
           {/* Menu */}
-          <div className="ml-auto justify-between text-[#8C8CA1]  w-[423px] h-[39px] bg-red ">
+          <div className="ml-auto justify-between text-[#ECF1F4]  w-[423px] h-[39px] bg-red ">
             <NavigationMenu>
               <NavigationMenuList className=" w-68 ">
                 {menu.map((item) => renderMenuItem(item))}
