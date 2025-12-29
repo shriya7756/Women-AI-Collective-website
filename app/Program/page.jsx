@@ -7,10 +7,12 @@ import HowisthisforSection from "./HowisthisforSection";
 import ProgramHighlightsSection from "./ProgramHightlight";
 import WhyJoin from "./Whyjoinus";
 import ToolsSection from "./Toolkit"
+import MobileHeroSection from "../Program/Mobileherosection";
 export  default function Program(){
     return(
         <div className="bg-black">
             <Herosection/>
+            <MobileHeroSection/>
             <HowDifferentSection/>
             <HowisthisforSection/>
             <ProgramHighlightsSection/>

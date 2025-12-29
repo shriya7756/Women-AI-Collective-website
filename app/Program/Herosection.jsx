@@ -6,7 +6,7 @@ import { Button } from "../../components/ui/button";
 
 export default function ProgramPage() {
   return (
-    <main className="min-h-screen bg-[#06061A] text-white font-sans">
+    <main className="min-h-screen bg-[#06061A] text-white font-sans hidden lg:block ">
 
       {/* NAVBAR */}
       <Navbar1 />
@@ -16,7 +16,7 @@ export default function ProgramPage() {
         <div className="grid grid-cols-12 gap-10 items-start">
 
           {/* LEFT IMAGE */}
-          <div className="col-span-12 md:col-span-3 flex justify-start">
+          <div className="hidden md:flex col-span-3 justify-start">
             <Image
              src="/Rectangle 3.png"
               alt="Master Gen AI"

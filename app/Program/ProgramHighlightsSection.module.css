@@ -90,7 +90,7 @@
     height: 420px;
     opacity: 1;
     border-radius: 23.03px;
-    padding: 0 21.25px 30px;
+    padding: 0 ;
     /* Reduced bottom padding */
     display: flex;
     flex-direction: column;
@@ -101,11 +101,13 @@
 }
 
 .cardImage4 {
-    width: calc(100% + 42.5px);
-    margin-left: -21.25px;
-    height: 180px;
-    /* Reduced from 220px to make room for text */
-    object-fit: cover;
+ width: 100%;
+  height: auto;       /* or whatever height the card needs */
+  object-fit: cover;   /* fills width + height without distortion */
+  object-position: center; /* keeps the important part centered */
+  display: block;
+  margin-bottom: 15px;
+  gap: 4px,10px;
 }
 
 /* Virtual Hackathon card in image has white bottom */
@@ -230,7 +232,7 @@
     width: 360px;
     height: 75px;
     top: 242px;
-    
+
     left: 28.66px;
     font-family: 'Work Sans', sans-serif;
     font-weight: 400;
@@ -301,17 +303,65 @@
     }
 
     .section {
-        padding: 80px 40px;
+        padding: 80px 30px;
         gap: 80px;
+        min-height: auto;
+    }
+
+    .heading {
+        font-size: 36px;
     }
 }
 
 @media (max-width: 640px) {
     .grid {
         grid-template-columns: 1fr;
+        gap: 30px;
     }
 
     .section {
         padding: 60px 20px;
+        gap: 60px;
+    }
+
+    .heading {
+        font-size: 28px;
+    }
+
+    .card1,
+    .card2,
+    .card3,
+    .card4,
+    .card5,
+    .card6 {
+        max-width: 100%;
+        height: auto;
+        min-height: 350px;
+    }
+
+    .cardHeading {
+        font-size: 24px;
+    }
+
+    .cardText {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+        padding: 60px 16px;
+    }
+
+    .heading {
+        font-size: 24px;
+    }
+
+    .cardHeading {
+        font-size: 20px;
+    }
+
+    .cardText {
+        font-size: 14px;
     }
 }

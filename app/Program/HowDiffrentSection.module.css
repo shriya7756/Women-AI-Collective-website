@@ -117,7 +117,7 @@
 
 @media (max-width: 1024px) {
     .section {
-        padding: 80px 40px;
+        padding: 80px 30px;
     }
 
     .container {
@@ -140,8 +140,9 @@
 
 @media (max-width: 640px) {
     .section {
-        height: 976px;
-        padding: 60px 28px;
+        height: auto;
+        min-height: 976px;
+        padding: 60px 20px;
     }
 
     .container {
@@ -166,5 +167,19 @@
 
     .listItem {
         font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+        padding: 60px 16px;
+    }
+
+    .heading {
+        font-size: 20px;
+    }
+
+    .box {
+        padding: 20px;
     }
 }
