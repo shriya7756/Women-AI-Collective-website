@@ -146,9 +146,34 @@
     align-items: center;
     gap: 40px;
     margin-top: 20px;
-    /* Reduced from 60px */
     padding-bottom: 20px;
+    position: relative;
+    /* Anchor for absolute image */
+    min-height: 250px;
+    /* Ensure height for image */
 }
+
+/* ... existing pillarContent ... */
+
+.pillarImageContainer {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    /* Let image define width or use fixed */
+    height: auto;
+    /* Remove flex: 1 and justify-content */
+}
+
+.pillarImage {
+    width: 270px;
+    height: 203px;
+    display: block;
+    object-fit: contain;
+    object-fit: contain;
+}
+
 
 .pillarContent {
     flex: 1;
@@ -188,19 +213,7 @@
     max-width: 546px;
 }
 
-.pillarImageContainer {
-    flex: 0 0 440px;
-    border-radius: 20px;
-    overflow: hidden;
-}
 
-.pillarImage {
-    left: 100px;
-    top: 1000px;
-    width: 100px;
-    height: 100px;
-    display: block;
-}
 
 @media (max-width: 1400px) {
     .pillarsWrapper {
@@ -225,6 +238,11 @@
         gap: 60px;
     }
 
+    /* Removed pillarFull column switch so it stays row on laptops */
+}
+
+/* New Tablet Breakpoint */
+@media (max-width: 1024px) {
     .pillarFull {
         flex-direction: column;
         align-items: flex-start;
@@ -233,6 +251,19 @@
     .pillarImageContainer {
         flex: 0 0 auto;
         width: 100%;
+        position: relative;
+        top: auto;
+        right: auto;
+        transform: none;
+        margin-top: 20px;
+        display: flex;
+        justify-content: flex-start;
+        /* Align left or center as preferred for stack */
+    }
+
+    .pillarImage {
+        width: 180px;
+        height: auto;
     }
 }
 
