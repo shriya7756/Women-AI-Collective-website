@@ -5,7 +5,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 80px 20px;
+    box-sizing: border-box;
+    /* increase top padding so the three boxes sit slightly lower */
+    padding: 100px 20px;
 }
 
 .container {
@@ -15,6 +17,8 @@
     justify-content: center;
     flex-wrap: nowrap;
     gap: 32px;
+    /* small downward offset so boxes are visually lower */
+    margin-top: 12px;
 }
 
 .impactBox {
@@ -101,30 +105,37 @@
     .container {
         flex-wrap: wrap;
         justify-content: center;
+        gap: 48px;
     }
 }
 
 @media (max-width: 768px) {
     .impactWrapper {
         min-height: auto;
-        padding: 60px 20px;
+        /* mobile: compact vertical padding but keep boxes visually lowered */
+        padding-top: 100px;
+        padding-bottom: 40px;
     }
 
     .container {
         flex-direction: column;
         align-items: center;
         flex-wrap: nowrap;
+        gap: 100px;
+        margin-top: 40px;
     }
 
     .impactBox {
         width: 100%;
         max-width: 352px;
+        opacity: 1;
+        /* Forced opacity as requested */
     }
 }
 
 @media (max-width: 480px) {
     .impactWrapper {
-        padding: 60px 16px;
+        padding: 40px 16px;
     }
 
     .value {

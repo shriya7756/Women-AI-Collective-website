@@ -5,9 +5,9 @@ import ProgramHighlightsSection from '@/components/ProgramHighlightsSection';
 export default function ProgramsPage() {
     return (
         <main className="min-h-screen">
-            <HowDifferentSection />
             <WhoIsThisForSection />
             <ProgramHighlightsSection />
+            <HowDifferentSection />
         </main>
     );
 }

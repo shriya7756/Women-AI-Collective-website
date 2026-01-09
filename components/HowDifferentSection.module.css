@@ -8,8 +8,24 @@
     flex-direction: column;
     align-items: center;
     gap: 60px;
-    background-color: #06061A;
+    /* Background image (Rectangle 6) with a dimming overlay on top (img_rectangle_5) */
+    background-image: url('/Rectangle6.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     position: relative;
+}
+
+.section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('/img_rectangle_5.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.65; /* dimming layer for better text readability */
+    z-index: 0;
 }
 
 .heading {
@@ -30,6 +46,8 @@
     justify-content: center;
     gap: 30px;
     width: 100%;
+    position: relative;
+    z-index: 1; /* ensure content sits above overlay */
 }
 
 .box {
