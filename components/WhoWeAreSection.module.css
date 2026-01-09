@@ -129,7 +129,7 @@
     line-height: 100%;
     letter-spacing: -0.03em;
     text-transform: uppercase;
-    color: #4A4A68;
+    color: #06061A;
 ;
     margin: 0;
 }
@@ -258,20 +258,29 @@
         border-top-right-radius: 40px;
     }
 
+    /* increase vertical spacing on mobile */
     .container {
-        gap: 60px;
+        gap: 100px;
     }
 
-    .contentRow,
+    /* Ensure image appears before text on mobile for both sections:
+       - For rows that are reversed on desktop keep normal column order
+       - For standard rows (text then image on desktop) show image first on mobile */
     .contentRowReverse {
         flex-direction: column;
         gap: 40px;
     }
 
+    .contentRow:not(.contentRowReverse) {
+        flex-direction: column-reverse;
+        gap: 40px;
+    }
+
     .textContent {
         max-width: 100%;
-        text-align: center;
-        align-items: center;
+        /* Mobile: use justified text for better readability */
+        text-align: justify;
+        align-items: stretch;
     }
 
     .imageContent {
