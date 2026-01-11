@@ -54,6 +54,9 @@
     opacity: 0;
     transform: translateY(20px);
     transition: all 0.8s ease;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
 }
 
 .heading.fadeIn {
@@ -181,6 +184,8 @@
     text-transform: capitalize;
     color: #4A4A68;
     margin: 0;
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
 
 .pillarTitle {
@@ -191,7 +196,11 @@
     letter-spacing: -2%;
     color: #000000;
     margin: 0;
-    display: inline-block;
+    display: block;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    max-width: 100%;
 }
 
 .pillarText {
@@ -203,6 +212,9 @@
     color: #06061A;
     margin: 0;
     max-width: 546px;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
 
 .pillarImageOnly {
@@ -249,7 +261,7 @@
 }
 
 /* New Tablet Breakpoint */
-@media (max-width: 1024px) {
+@media (max-width: 640px) {
     .pillarFull {
         flex-direction: column;
         align-items: flex-start;
@@ -273,11 +285,12 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 640px) {
     .pillarsWrapper {
         padding: 40px 20px;
         min-height: auto;
-        background: linear-gradient(135deg, #FFB6D9 0%, #FFD4E5 100%);
+        background: url('/How we solve the problem- mobile bg.png') no-repeat center center;
+        background-size: cover;
         mask-image: none;
         mask-size: none;
         mask-repeat: none;

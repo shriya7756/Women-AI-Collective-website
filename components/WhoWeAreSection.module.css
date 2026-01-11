@@ -91,6 +91,7 @@
     flex-direction: column;
     gap: 30px;
     max-width: 640px;
+    overflow: hidden;
 }
 
 .imageContent {
@@ -110,6 +111,10 @@
     text-transform: uppercase;
     color: #06061A;
     margin: 0;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
 }
 
 .subText {
@@ -120,6 +125,9 @@
     letter-spacing: 0;
     color: #4A4A68;
     margin: 0;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
 
 .secondHeading {
@@ -130,8 +138,11 @@
     letter-spacing: -0.03em;
     text-transform: uppercase;
     color: #06061A;
-;
     margin: 0;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
 }
 
 .secondSubText {
@@ -141,8 +152,10 @@
     line-height: 140%;
     letter-spacing: 0;
     color: #4A4A68;
-    
     margin: 0;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
 
 /* Image Styling */
@@ -226,7 +239,7 @@
 }
 
 /* Responsive Design */
-@media (max-width: 1024px) {
+@media (max-width: 640px) {
     .contentRow {
         gap: 60px;
     }
@@ -251,7 +264,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 640px) {
     .heroSection {
         padding: 60px 30px;
         border-top-left-radius: 40px;
@@ -278,8 +291,8 @@
 
     .textContent {
         max-width: 100%;
-        /* Mobile: use justified text for better readability */
-        text-align: justify;
+        /* Mobile: use left alignment for better readability */
+        text-align: left;
         align-items: stretch;
     }
 
@@ -296,12 +309,14 @@
     .secondHeading {
         font-size: 36px;
         letter-spacing: -0.02em;
+        text-align: left;
     }
 
     .subText,
     .secondSubText {
         font-size: 16px;
         line-height: 150%;
+        text-align: left;
     }
 
     .knowMoreButton {

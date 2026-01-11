@@ -5,6 +5,7 @@ const HowDifferentSection = () => {
     return (
         <section className={styles.section}>
             <h2 className={styles.heading}>How We're Different</h2>
+            
 
             <div className={styles.container}>
                 {/* Left Box */}
