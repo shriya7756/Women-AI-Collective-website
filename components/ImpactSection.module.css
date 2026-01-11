@@ -35,6 +35,7 @@
     gap: 10px;
     position: relative;
     flex-shrink: 0;
+    overflow: hidden;
 
     /* Specified Inset Shadows */
     box-shadow:
@@ -88,6 +89,9 @@
     letter-spacing: -3%;
     text-transform: uppercase;
     color: #ECF1F4;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
 
 .label {
@@ -98,6 +102,9 @@
     letter-spacing: 3%;
     text-transform: capitalize;
     color: #FFFFFF;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
 
 /* Responsive */
