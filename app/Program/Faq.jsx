@@ -57,7 +57,7 @@ function AccordionItem({ question, answer, isOpen, onClick }) {
   return (
     <div
       className="
-        w-full max-w-[1000px] bg-transparent border border-white/20 rounded-[20px] mb-4
+        w-full max-w-[1000px] bg-[#333333] border border-white/20 rounded-[20px] mb-4
         transition-all duration-300 overflow-hidden 
       "
     >
@@ -125,7 +125,7 @@ export default function FAQ() {
         </div>
 
         {/* FAQ LIST */}
-        <div className="w-full flex flex-col items-center">
+        <div className="w-full flex flex-col  items-center">
           {faqData.map((item, i) => (
             <AccordionItem
               key={i}
@@ -133,6 +133,7 @@ export default function FAQ() {
               answer={item.answer}
               isOpen={openIndex === i}
               onClick={() => toggleAccordion(i)}
+              className="bg-[#333333]"
             />
           ))}
         </div>

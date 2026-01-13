@@ -9,7 +9,7 @@ export default function ProgramPage() {
     <main className="bg-[#06061A] text-white font-sans min-h-screen block lg:hidden">
 
       {/* NAVBAR */}
-      <Navbar1 />
+      
 
       {/* HERO SECTION */}
       <section className="px-5 pt-10 md:px-16 lg:px-20">

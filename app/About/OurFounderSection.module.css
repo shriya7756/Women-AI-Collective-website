@@ -1,8 +1,7 @@
 .section {
   position: relative;
   width: 100%;
-  max-width: 1441px;
-  margin: 0 auto;
+  margin: 0 ;
   background-color: #03091D;
   /* Dark background from image */
   padding: 80px 20px 100px;
