@@ -8,6 +8,7 @@ import JoinUs from "./Joinu";
 import Footer from "../../components/ui/Footer"
 import FlagShip from "./Flagship";
 import MobileHeroSection from "./MobileHero";
+import Navbar1 from "../../components/ui/navbar1";
 export default  function LandingPage(){
     
     return(

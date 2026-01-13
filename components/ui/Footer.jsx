@@ -1,6 +1,6 @@
 "use client"
 import { useState } from "react"
-import { Button } from "@/components/ui/button"
+import { Button } from "../../components/ui/button"
 import Image from "next/image"
 import { Instagram, Linkedin, Phone, Mail } from "lucide-react"
 

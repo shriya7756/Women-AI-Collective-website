@@ -1,0 +1,169 @@
+.section {
+  position: relative;
+  width: 100%;
+  max-width: 1441px;
+  margin: 0 auto;
+  background-color: #03091D;
+  /* Dark background from image */
+  padding: 80px 20px 100px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heading {
+  
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 100%;
+  letter-spacing: -0.03em;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-bottom: 80px;
+  position: relative;
+  z-index: 2;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
+
+.contentContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Centered vertically */
+  gap: 60px;
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+  z-index: 2;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  flex-shrink: 0;
+  display: flex;
+}
+
+.bgImage {
+  position: absolute;
+  top: 0;
+  width: 450px;
+  height: auto;
+  z-index: 1;
+  object-fit: contain;
+}
+
+.founderImage {
+
+
+  position: absolute;
+  top: 40px;
+  left: 235px;
+  z-index: 2;
+  width: 400px;
+  height: auto;
+  border-radius: 20px;
+  /* removed box-shadow */
+}
+
+.textColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 540px;
+  color: #FFFFFF;
+  overflow: hidden;
+}
+
+.subHeading {
+  
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-style: italic;
+  font-size: 64px;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: #FFFFFF;
+  margin: 0;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
+
+.description {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 160%;
+  letter-spacing: 0%;
+  color: #ECF1F4;
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.linkedinLink {
+  align-self: flex-end;
+  /* Pushes to the right */
+  display: block;
+  width: 70px;
+  height: 70px;
+  margin-top: 20px;
+  transition: transform 0.2s ease;
+}
+
+.linkedinLink:hover {
+  transform: scale(1.05);
+}
+
+.linkedinIcon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+@media (max-width: 640px) {
+  .contentContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+  }
+
+  .imageWrapper {
+    width: 100%;
+    height: 500px;
+    /* Approximate height for mobile view */
+    display: flex;
+    justify-content: center;
+  }
+
+  .bgImage {
+    position: absolute;
+    width: 60%;
+    left: 5%;
+  }
+
+  .founderImage {
+    position: absolute;
+    width: 60%;
+    left: auto;
+    right: 5%;
+    top: 10%;
+  }
+
+  .textColumn {
+    align-items: center;
+    text-align: center;
+  }
+
+  .linkedinLink {
+    align-self: center;
+  }
+}

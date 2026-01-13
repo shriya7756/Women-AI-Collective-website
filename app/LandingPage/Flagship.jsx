@@ -1,5 +1,5 @@
 "use client"
-import { Button } from "@/components/ui/button"
+import { Button } from "../../components/ui/button"
 import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react'
 
@@ -67,11 +67,11 @@ export default function FlagShip() {
           {/* Card 1 */}
           <div 
             ref={card1Ref}
-            className="absolute inset-0 w-full h-full rounded-[40px] bg-[#F1247B] shadow-[inset_1px_1px_2px_0px_#FFFFFF4D,inset_-1px_-1px_2px_0px_#FFFFFF1A,inset_0px_1px_10px_0px_#FFFFFF4D] overflow-hidden will-change-transform"
+            className="absolute inset-0 w-full h-full rounded-[40px] bg-[#F1247B] will-change-transform"
             style={{
               transform: `scale(${1 - easedProgress * 0.08}) translateY(${-easedProgress * 80}px)`,
               opacity: 1 - easedProgress * 0.5,
-              transition: 'transform 0.05s ease-out, opacity 0.05s ease-out'
+              transition: 'transform 0.05s ease-out,  ease-out'
             }}
           >
             {/* Image Container - Left Side */}
@@ -116,7 +116,7 @@ export default function FlagShip() {
             style={{
               transform: `translateY(${(1 - easedProgress) * 100}%) scale(${0.95 + easedProgress * 0.05})`,
               opacity: easedProgress,
-              transition: 'transform 0.05s ease-out, opacity 0.05s ease-out'
+              transition: 'transform 0.05s ease-out,  ease-out'
             }}
           >
             {/* Image Container - Left Side */}
