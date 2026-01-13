@@ -142,7 +142,7 @@ export default function ToolsSection() {
              {sec.tools.map((tool, index) => (
          <div
           key={index}
-          className="p-6 rounded-[30px] text-center transition
+          className="p-6 rounded-[10px] text-center transition
                  border border-[#F1247B] bg-[#FAFCFE]
                  shadow-[4px_4px_0px_0px_#E62376E5] hover:shadow-[6px_6px_0px_0px_#E62376E5]"
            >
