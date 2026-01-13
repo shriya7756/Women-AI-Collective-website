@@ -8,9 +8,12 @@ import ProgramHighlightsSection from "./ProgramHightlight";
 import WhyJoin from "./Whyjoinus";
 import ToolsSection from "./Toolkit"
 import MobileHeroSection from "../Program/Mobileherosection";
+import Navbar1 from "../../components/ui/navbar1";
+
 export  default function Program(){
     return(
-        <div className="bg-black">
+        <div className="bg-[#06061A]">
+            <Navbar1/>
             <Herosection/>
             <MobileHeroSection/>
             <HowDifferentSection/>

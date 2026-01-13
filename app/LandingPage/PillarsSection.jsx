@@ -1,8 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import Image from 'next/image';
-import styles from '../LandingPage/PillarsSection.module.css';
+import styles from './PillarsSection.module.css';
 
 const pillars = [
     {
@@ -53,14 +52,14 @@ export default function PillarsSection() {
     }, []);
 
     return (
-        <section id="pillars-section" className={styles.pillarsWrapper}>
+        <section id="pillars-section" className={`${styles.pillarsWrapper} bg-[#06061A]`}>
             <div className={styles.container}>
                 <h2 className={`${styles.heading} ${isVisible ? styles.fadeIn : ''}`}>
                     HOW WE SOLVE THE PROBLEM
                 </h2>
 
                 <div className={`${styles.dottedRectangle} ${isVisible ? styles.fadeInScale : ''}`}>
-                    {/* Precise Divider Lines - Desktop Only */}
+                    {/* Precise Divider Lines */}
                     <div className={styles.verticalLine}></div>
                     <div className={styles.horizontalLineLeft}></div>
                     <div className={styles.horizontalLineRight}></div>
@@ -74,19 +73,17 @@ export default function PillarsSection() {
                                     <h3 className={styles.pillarTitle}>{pillar.title}</h3>
                                     <p className={styles.pillarText}>{pillar.description}</p>
                                 </div>
-                                {pillar.hasImage && (
-                                    <div className={styles.pillarImageContainer}>
-                                        <Image
-                                            src="/How we solve the problem Img.png"
-                                            alt="Sisterhood Support"
-                                            width={440}
-                                            height={300}
-                                            className={styles.pillarImage}
-                                        />
-                                    </div>
-                                )}
                             </div>
                         ))}
+                    </div>
+
+                    {/* Image shown after all pillars (keeps desktop absolute placement, mobile shows it after pillar 5) */}
+                    <div className={styles.pillarImageOnly}>
+                        <img
+                            src="/How we solve the problem Img.png"
+                            alt="Sisterhood Support"
+                            className={styles.pillarImage}
+                        />
                     </div>
                 </div>
             </div>

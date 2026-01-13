@@ -37,7 +37,7 @@ const Navbar1 = ({
     { title: "Home", url: "./LandingPage" },
     {
       title: "About",
-      url: "#",
+      url: "./About",
       
     },
     {
@@ -57,9 +57,9 @@ const Navbar1 = ({
 
 }) => {
   return (
-    <section className="relative pt-8 pb-8 pr-16 pl-16 ">
+    <section className="sticky top-0 z-[500] pt-8 pb-8 pr-16 pl-16 ">
       <nav
-        className="
+        className=" 
           hidden lg:flex
           mx-auto 
           items-center justify-space-between 

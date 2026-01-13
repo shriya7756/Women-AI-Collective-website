@@ -1,3 +1,6 @@
+.body{
+    background-color: #06061A;
+}
 .pillarsWrapper {
     width: 100%;
     min-height: 1200px;
@@ -11,7 +14,8 @@
     padding: 160px 70px 100px;
     position: relative;
     overflow: hidden;
-    margin-top: -100px;
+    /* start pillars after previous section (no overlap) */
+    margin-top: 0;
     /* Organic wavy top using mask-image */
     mask-image: url("data:image/svg+xml,%3Csvg width='1440' height='100' viewBox='0 0 1440 100' preserveAspectRatio='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 100V40C150 10 300 80 450 40C600 0 750 80 900 40C1050 0 1200 80 1440 40V100H0Z' fill='black'/%3E%3C/svg%3E"), linear-gradient(black 100px, black);
     mask-size: 100% 100px, 100% 100%;
@@ -53,6 +57,9 @@
     opacity: 0;
     transform: translateY(20px);
     transition: all 0.8s ease;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
 }
 
 .heading.fadeIn {
@@ -62,14 +69,12 @@
 
 .dottedRectangle {
     width: 1300px;
-    min-height: 750px;
-    /* Reduced from 870px */
+    min-height: auto;
     height: auto;
     border-radius: 10px;
     border: 1px dashed #666666;
     background: rgba(236, 241, 244, 0.1);
-    /* Increased slight visibility for overlay effect */
-    padding: 60px;
+    padding: 40px;
     position: relative;
     opacity: 0;
     transform: scale(0.98);
@@ -127,8 +132,23 @@
 .pillarsGrid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px 100px;
+    gap: 30px 50px;
     position: relative;
+    width: 100%;
+}
+
+/* Pillar items: separators and spacing for mobile-like stacked layout */
+.pillarItem {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 0 0 0;
+}
+
+.pillarItem:not(:last-child) {
+    border-bottom: 1px solid #666666;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
 }
 
 .pillarItem {
@@ -143,11 +163,12 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     gap: 40px;
-    margin-top: 20px;
-    /* Reduced from 60px */
-    padding-bottom: 20px;
+    margin-top: 0;
+    padding-bottom: 0;
+    position: relative;
+    min-height: auto;
 }
 
 .pillarContent {
@@ -165,6 +186,9 @@
     letter-spacing: 3%;
     text-transform: capitalize;
     color: #4A4A68;
+    margin: 0;
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
 
 .pillarTitle {
@@ -175,6 +199,11 @@
     letter-spacing: -2%;
     color: #000000;
     margin: 0;
+    display: block;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    max-width: 100%;
 }
 
 .pillarText {
@@ -186,21 +215,27 @@
     color: #06061A;
     margin: 0;
     max-width: 546px;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
 
-.pillarImageContainer {
-    flex: 0 0 440px;
-    border-radius: 20px;
-    overflow: hidden;
+.pillarImageOnly {
+    position: absolute;
+    right: 40px;
+    top: auto;
+    bottom: 40px;
+    z-index: 2;
 }
 
 .pillarImage {
-    left: 100px;
-    top: 1000px;
-    width: 100px;
-    height: 100px;
+    width: 270px;
+    height: 203px;
     display: block;
+    object-fit: contain;
 }
+
+
 
 @media (max-width: 1400px) {
     .pillarsWrapper {
@@ -225,63 +260,154 @@
         gap: 60px;
     }
 
+    /* Removed pillarFull column switch so it stays row on laptops */
+}
+
+/* New Tablet Breakpoint */
+@media (max-width: 640px) {
     .pillarFull {
         flex-direction: column;
         align-items: flex-start;
+        gap: 30px;
     }
 
-    .pillarImageContainer {
-        flex: 0 0 auto;
+    .pillarImageOnly {
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: none;
+        margin-top: 20px;
+        display: flex;
+        justify-content: flex-start;
         width: 100%;
+    }
+
+    .pillarImage {
+        width: 270px;
+        height: 203px;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 640px) {
     .pillarsWrapper {
-        padding: 80px 20px 60px;
+        padding: 40px 20px;
+        min-height: auto;
+        background: url('/How we solve the problem- mobile bg.png') no-repeat center center;
+        background-size: cover;
+        mask-image: none;
+        mask-size: none;
+        mask-repeat: none;
+        mask-position: none;
     }
 
     .dottedRectangle {
-        padding: 30px 20px;
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+        border: none;
+        background: transparent;
+        margin: 0;
     }
 
     .heading {
-        font-size: 36px;
-    }
-
-    .pillarTitle {
-        font-size: 32px;
-    }
-
-    .pillarText {
-        font-size: 16px;
+        font-size: 28px;
+        color: #000000;
+        margin-bottom: 30px;
     }
 
     .pillarsGrid {
-        grid-template-columns: 1fr;
-        gap: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        width: 100%;
+        max-width: 375px;
+        margin: 0 auto;
+    }
+
+    .pillarItem {
+        width: 100%;
+        padding: 20px 0;
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .pillarItem:not(:last-child) {
+        border-bottom: 1px solid #666666;
+        opacity: 0.7;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+
+    .pillarNumber {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 100%;
+        margin: 0;
+        color: #4A4A68;
+    }
+
+    .pillarTitle {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 100%;
+        letter-spacing: -2%;
+        margin: 0;
+        color: #000000;
+    }
+
+    .pillarText {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 140%;
+        margin: 0;
+        color: #06061A;
+    }
+
+    .pillarImageOnly {
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: none;
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .pillarImage {
+        width: 240px;
+        height: auto;
+        object-fit: contain;
     }
 }
 
 @media (max-width: 480px) {
     .pillarsWrapper {
-        padding: 60px 16px 40px;
+        padding: 40px 16px;
+        min-height: auto;
+        background: linear-gradient(135deg, #FFB6D9 0%, #FFD4E5 100%);
     }
 
     .dottedRectangle {
-        padding: 20px 16px;
+        width: 100%;
+        padding: 0;
+        border: none;
+        background: transparent;
     }
 
     .heading {
-        font-size: 28px;
+        font-size: 24px;
+        margin-bottom: 20px;
     }
 
     .pillarTitle {
-        font-size: 24px;
+        font-size: 16px;
     }
 
     .pillarText {
-        font-size: 15px;
+        font-size: 14px;
     }
 }
 /*Who we are */
@@ -378,6 +504,7 @@
     flex-direction: column;
     gap: 30px;
     max-width: 640px;
+    overflow: hidden;
 }
 
 .imageContent {
@@ -397,6 +524,10 @@
     text-transform: uppercase;
     color: #06061A;
     margin: 0;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
 }
 
 .subText {
@@ -407,6 +538,9 @@
     letter-spacing: 0;
     color: #4A4A68;
     margin: 0;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
 
 .secondHeading {
@@ -418,6 +552,10 @@
     text-transform: uppercase;
     color: #06061A;
     margin: 0;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
 }
 
 .secondSubText {
@@ -428,6 +566,9 @@
     letter-spacing: 0;
     color: #4A4A68;
     margin: 0;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
 
 /* Image Styling */
@@ -511,7 +652,7 @@
 }
 
 /* Responsive Design */
-@media (max-width: 1024px) {
+@media (max-width: 640px) {
     .contentRow {
         gap: 60px;
     }
@@ -536,27 +677,36 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 640px) {
     .heroSection {
         padding: 60px 30px;
         border-top-left-radius: 40px;
         border-top-right-radius: 40px;
     }
 
+    /* increase vertical spacing on mobile */
     .container {
-        gap: 60px;
+        gap: 100px;
     }
 
-    .contentRow,
+    /* Ensure image appears before text on mobile for both sections:
+       - For rows that are reversed on desktop keep normal column order
+       - For standard rows (text then image on desktop) show image first on mobile */
     .contentRowReverse {
         flex-direction: column;
         gap: 40px;
     }
 
+    .contentRow:not(.contentRowReverse) {
+        flex-direction: column-reverse;
+        gap: 40px;
+    }
+
     .textContent {
         max-width: 100%;
-        text-align: center;
-        align-items: center;
+        /* Mobile: use left alignment for better readability */
+        text-align: left;
+        align-items: stretch;
     }
 
     .imageContent {
@@ -572,12 +722,14 @@
     .secondHeading {
         font-size: 36px;
         letter-spacing: -0.02em;
+        text-align: left;
     }
 
     .subText,
     .secondSubText {
         font-size: 16px;
         line-height: 150%;
+        text-align: left;
     }
 
     .knowMoreButton {

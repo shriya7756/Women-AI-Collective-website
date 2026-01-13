@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import styles from '../LandingPage/ImpactSection.module.css';
+import styles from './ImpactSection.module.css';
 
 const impactData = [
     {

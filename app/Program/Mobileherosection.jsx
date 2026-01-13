@@ -2,14 +2,14 @@
 
 import Image from "next/image";
 import Navbar1 from "../../components/ui/navbar1";
-import { Button } from "@/components/ui/button";
+import { Button } from "../../components/ui/button";
 
 export default function ProgramPage() {
   return (
     <main className="bg-[#06061A] text-white font-sans min-h-screen block lg:hidden">
 
       {/* NAVBAR */}
-      <Navbar1 />
+      
 
       {/* HERO SECTION */}
       <section className="px-5 pt-10 md:px-16 lg:px-20">
