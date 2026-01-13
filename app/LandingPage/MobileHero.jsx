@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import  Navbar1  from "@/components/ui/navbar1"
-import "app/globals.css"
+import  Navbar1  from "../../components/ui/navbar1"
+// import "app/globals.css"
 import { Fraunces } from "next/font/google";
 
 const fraunces = Fraunces({

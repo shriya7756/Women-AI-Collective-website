@@ -1,7 +1,8 @@
 import Image from 'next/image'
-import Navbar1  from "../../components/ui/navbar1"
+
 import {Button} from "../../components/ui/button"
 import { Fraunces } from "next/font/google";
+import Navbar1 from '../../components/ui/navbar1';
 
 const fraunces = Fraunces({
   subsets: ["latin"],
@@ -27,8 +28,8 @@ export default function Herosection(){
     />
   </div>
 
-<div className='relative z-10 flex flex-col min-h-screen'>
- <Navbar1/> 
+<div className='sticky top-0 z-[100]  z-10 flex flex-col min-h-screen'>
+  <Navbar1/>
 <div className="mx-auto w-[1000px] h-[48px]  bg-[#06061A]/50 rounded-[10px] px-8 flex items-center justify-center gap-4 shadow-[0px_0px_10px_0px_rgba(255,255,255,0.2)] backdrop-blur-sm">
   
               <div className="relative w-5 h-5 md:w-6 md:h-[25px] flex-shrink-0">
@@ -74,7 +75,7 @@ export default function Herosection(){
   width={176}       // match Figma width
     height={1}   
     alt="underline" 
-    className="absolute left-0 -bottom-1 "
+    className="absolute left-4 -bottom-1 "
   />
      {" "}
   </span>
@@ -85,7 +86,7 @@ export default function Herosection(){
     width={176}       // match Figma width
     height={1}   
     alt="underline" 
-    className="absolute left-0 -bottom-1"
+    className="absolute left-3 -bottom-1"
   />
   </span>
 
@@ -98,17 +99,18 @@ export default function Herosection(){
      width={176}       // match Figma width
     height={1}  
       alt="underline" 
-      className="absolute left -bottom-1 "
+      className="absolute left-3 -bottom-1 "
     />
     {"  "}
   </span>
     {" "} of the Future
   </span>
 </h1>
-<p className=' flex flex-col block md:inline font-medium text-2lg sm:text-sm md:text-lg lg:text-3lg leading-tight md:leading-[70px] text-[#FAFCFE]'> 
+<p className=' flex flex-col block md:inline font-large text-2lg sm:text-sm md:text-lg lg:text-xl leading-tight md:leading-[70px] text-[#FAFCFE]'> 
         From Zero to AI Fluet: Every Girl ,  Every Stram ,  every Dream!</p>
 
-      <Button className="h-10  px-6 md:px-8 bg-[#F1247B] font-bold text-[18px] text-[#FFFFFF] font-semibold text-sm md:text-base lg:text-lg rounded-[10px] hover:bg-[#F1247B]">
+      <Button className="h-10 px-6 md:px-8 bg-[#F1247B] font-bold text-[18px] text-[#FFFFFF] font-semibold text-sm md:text-base lg:text-lg rounded-[10px] hover:bg-[#F1247B] hover:shadow-4xl active:scale-100 active:shadow-inner transition-all duration-150"
+   >
         JOIN THE AI 101 PROGRAM
       </Button>
 

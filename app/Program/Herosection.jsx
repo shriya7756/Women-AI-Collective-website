@@ -1,6 +1,6 @@
 "use client";
 
-import Navbar1 from "@/components/ui/navbar1";
+
 import Image from "next/image";
 import { Button } from "../../components/ui/button";
 
@@ -8,8 +8,6 @@ export default function ProgramPage() {
   return (
     <main className="min-h-screen bg-[#06061A] text-white font-sans hidden lg:block ">
 
-      {/* NAVBAR */}
-      <Navbar1 />
 
       {/* HERO SECTION */}
       <section className="py-14 px-6 md:px-16 lg:px-20 bg-[#06061A]">
