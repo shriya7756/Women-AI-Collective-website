@@ -32,13 +32,13 @@ const ProgramHighlightsSection = () => {
         },
         {
             title: "Virtual Hackathon",
-            text: "Unlock the hacks, give you an edge to build services and product you can sell and start earning..",
+            text: "Build projects using AI tools in real time, collaborating and competing.",
             className: styles.card4,
             imageUrl: "/Vector.png"
         },
         {
             title: "AI Cheat Sheet",
-            text: "Unlock the hacks, give you an edge to build services and product you can sell and start earning.",
+            text: "Unlock the hacks, tips & tricks that will give you an edge to build services and product you can sell and start earning.",
             className: styles.card5,
             imageUrl: "/light icon.png",
             showArrow: true
