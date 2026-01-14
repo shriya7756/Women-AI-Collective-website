@@ -16,9 +16,9 @@ export  default function Program(){
             <Navbar1/>
             <Herosection/>
             <MobileHeroSection/>
-            <HowDifferentSection/>
             <HowisthisforSection/>
             <ProgramHighlightsSection/>
+            <HowDifferentSection/>
             <ToolsSection/>
             <Home/>
             <WhyJoin/>
