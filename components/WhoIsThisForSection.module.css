@@ -96,7 +96,8 @@
         height: auto;
         padding: 60px 30px;
         gap: 40px;
-        background: #FFAEDC;
+        background: url('/Desktop - 2.png') no-repeat center center;
+        background-size: cover;
     }
 
     .leftContent,
