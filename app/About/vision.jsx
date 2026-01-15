@@ -55,7 +55,7 @@ export default function Vision() {
           </p>
 
           <Image
-            src="/wordcloud.png"   // place image in /public/wordcloud.png
+            src="image"      // place image in /public/wordcloud.png
             alt="Word Cloud"
             width={420}
             height={260}
