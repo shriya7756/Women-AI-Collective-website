@@ -215,10 +215,12 @@
 }
 
 .pillarImageOnly {
-    position: absolute;
-    right: 40px;
-    top: auto;
-    bottom: 40px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 40px;
+    margin-top: 20px;
     z-index: 2;
 }
 
