@@ -1,6 +1,6 @@
 export default function GetInvolved() {
   return (
- <section className="bg-[#0B0B1A] py-24 px-6">
+ <section className="bg-[#03091D] py-24 px-6">
 <h1 className="font-['Work_Sans'] text-[50px] font-bold leading-[59px] text-center text-[#FAFCFE] max-w-[356px] mx-auto whitespace-nowrap mb-[30px]">
   GET INVOLVED </h1>
 
