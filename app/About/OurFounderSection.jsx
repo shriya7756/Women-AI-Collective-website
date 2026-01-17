@@ -2,7 +2,6 @@
 
 import styles from './OurFounderSection.module.css';
 
-
 export default function OurFounderSection() {
     return (
         <section className={styles.section}>
@@ -11,7 +10,7 @@ export default function OurFounderSection() {
             <div className={styles.contentContainer}>
                 <div className={styles.imageWrapper}>
                     <img
-                        src="/Our Founder - bg img.png"
+                        src="/motion_photo_4942381548780179075.jpg"
                         alt=""
                         className={styles.bgImage}
                     />
