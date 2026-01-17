@@ -35,7 +35,7 @@ export default function Vision() {
         {/* ===== RIGHT TOP : IMAGE ===== */}
         <div className="relative w-full h-[300px] md:h-full">
           <Image
-            src="/books.jpg"   // place image in /public/books.jpg
+            src="/books img.png"   // place image in /public/books.jpg
             alt="Bookshelf"
             fill
             className="object-cover"
@@ -55,7 +55,7 @@ export default function Vision() {
           </p>
 
           <Image
-            src="image"      // place image in /public/wordcloud.png
+            src="/left 2.png"      // place image in /public/wordcloud.png
             alt="Word Cloud"
             width={420}
             height={260}
