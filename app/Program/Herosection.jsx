@@ -1,6 +1,6 @@
 "use client";
 
-import Navbar1 from "@/components/ui/navbar1";
+import Navbar1 from "../../components/ui/navbar1";
 import Image from "next/image";
 import { Button } from "../../components/ui/button";
 
