@@ -52,7 +52,7 @@ export default function PillarsSection() {
     }, []);
 
     return (
-        <section id="pillars-section" className={`${styles.pillarsWrapper} bg-[#06061A]`}>
+        <section id="pillars-section" className={styles.pillarsWrapper}>
             <div className={styles.container}>
                 <h2 className={`${styles.heading} ${isVisible ? styles.fadeIn : ''}`}>
                     HOW WE SOLVE THE PROBLEM
@@ -79,11 +79,14 @@ export default function PillarsSection() {
 
                     {/* Image shown after all pillars (keeps desktop absolute placement, mobile shows it after pillar 5) */}
                     <div className={styles.pillarImageOnly}>
-                        <img
-                            src="/How we solve the problem Img.png"
-                            alt="Sisterhood Support"
-                            className={styles.pillarImage}
-                        />
+                        <picture>
+                            <source media="(max-width: 768px)" srcSet="/how we solve the problem img - mobile image.png" />
+                            <img
+                                src="/How we solve the problem Img.png"
+                                alt="Sisterhood Support"
+                                className={styles.pillarImage}
+                            />
+                        </picture>
                     </div>
                 </div>
             </div>
