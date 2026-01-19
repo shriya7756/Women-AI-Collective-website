@@ -1,6 +1,6 @@
 import { Geist, Geist_Mono ,Fraunces,Indie_Flower} from "next/font/google";
 import { Poppins, Patrick_Hand,  } from 'next/font/google';
-import "./globals.css";
+import "./global.css"
 
 
 

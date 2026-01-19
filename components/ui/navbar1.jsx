@@ -57,7 +57,7 @@ const Navbar1 = ({
 
 }) => {
   return (
-    <section className="sticky top-0 z-[500] pt-8 pb-8 pr-16 pl-16 ">
+    <section className="sticky top-0 z-[500] py-8 px-0 md:px-8 lg:px-16">
       <nav
         className=" 
           hidden lg:flex

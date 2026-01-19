@@ -10,12 +10,13 @@ import ToolsSection from "./Toolkit"
 import MobileHeroSection from "../Program/Mobileherosection";
 import Navbar1 from "../../components/ui/navbar1";
 
+
 export  default function Program(){
     return(
-        <div className="bg-[#06061A]">
+        <div className=" min-h-screen bg-black">
             <Navbar1/>
             <Herosection/>
-            <MobileHeroSection/>
+            {/* <MobileHeroSection/> */}
             <HowisthisforSection/>
             <ProgramHighlightsSection/>
             <HowDifferentSection/>

@@ -12,7 +12,8 @@ import Navbar1 from "../../components/ui/navbar1";
 export default  function LandingPage(){
     
     return(
-        < div className="bg-black">
+        < div className="bg-black ">
+
       <Herosection/>
       <MobileHeroSection/>
      <WhoWeAreSection/>

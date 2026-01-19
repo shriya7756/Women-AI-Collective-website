@@ -7,7 +7,6 @@ import { Button } from "../../components/ui/button";
 export default function ProgramPage() {
   return (
     <main className="min-h-screen bg-[#06061A] text-white font-sans">
-    <Navbar1 />
 
   <section className="py-14 px-6 md:px-16 lg:px-20 bg-[#06061A]">
   <div className="grid grid-cols-12 gap-10 items-start">
@@ -15,7 +14,7 @@ export default function ProgramPage() {
    
               
   <div className="pointer-events-none col-span-12 md:col-span-3 flex justify-start">
-    <Image src="/Rectangle-3.png" alt="Master Gen AI" width={300} height={400}
+    <Image src="/Rectangle 3.png" alt="Master Gen AI" width={300} height={400}
     className="absolute top-[100px] left-1/2 -translate-x-1/2 w-[375px] h-[200px] object-cover object-bottom rounded-lg md:top-[150px] md:left-[3px] md:translate-x-0 md:w-[300px] md:h-[400px] shadow-xl " />
                  </div>
 
@@ -52,7 +51,7 @@ export default function ProgramPage() {
 
   
   <div className=" hidden md:block absolute  top-[767px] right-0 md:w-[300px] md:h-[300px]  md:left-1140px md:translate-x-0 md:top-[150px]">
-  <Image src="/Rectangle-1.png" alt="Classroom AI" width={300} height={300} className="md:rounded-lg md:shadow-xl " />
+  <Image src="/Rectangle 1.png" alt="Classroom AI" width={300} height={300} className="md:rounded-lg md:shadow-xl " />
                    </div>
         </div>
       </section>
@@ -94,7 +93,7 @@ export default function ProgramPage() {
 
  
   <div className=" relative col-span-12" />
-  <Image src="/Rectangle-1.png" alt="AI Board" width={300} height={300}
+  <Image src="/Rectangle 1.png" alt="AI Board" width={300} height={300}
   className="absolute top-[767px] left-1/2 -translate-x-1/2 w-[375px] h-[220px] object-cover object-top w-[375px] h-[220px] object-cover object-bottom
   md:top-[600px] md:left-[1000px] md:translate-x-0 md:w-[300px] md:h-[300px] md:object-contain rounded-lg shadow-xl "/>
     
