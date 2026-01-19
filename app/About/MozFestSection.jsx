@@ -21,25 +21,25 @@ export default function MozFestSection() {
           {/* Images */}
          <div className="grid grid-cols-4 gap-4 w-fit h-fit mt-6">
   <img
-    src="left.jpg"
+    src="/motion_photo_4942381548780179075.jpg"
     alt="MozFest image 1"
     className="w-[300px] h-[312px] object-cover rounded-[16px]"
   />
 
   <img
-    src="center.jpg"
+    src="/IMG-20251107-WA0018.jpg"
     alt="MozFest image 2"
     className="w-[300px] h-[312px] object-cover rounded-[16px]"
   />
 
   <img
-    src="centre-2.jpg"
+    src="/motion_photo_5954914492110456690.jpg"
     alt="MozFest image 3"
     className="w-[318px] h-[312px] object-cover rounded-[16px]"
   />
 
   <img
-    src="chair.jpg"
+    src="/IMG-20251108-WA0010.jpg"
     alt="MozFest image 4"
     className="w-[318px] h-[312px] object-cover rounded-[16px]"
   />

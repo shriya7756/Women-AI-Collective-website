@@ -443,7 +443,8 @@
     .grid {
         grid-template-columns: 1fr;
         gap: 20px;
-        width: 300px;
+        width: 100%;
+        max-width: 340px;
         height: auto;
         margin: 0 auto;
     }
@@ -463,9 +464,10 @@
     .card4,
     .card5,
     .card6 {
-        width: 300px;
-        height: 260px;
-        gap: 0px;
+        width: 100%;
+        height: auto;
+        min-height: 300px;
+        gap: 12px;
         border-radius: 23.03px;
         padding: 20px;
         margin: 0 auto;
@@ -484,11 +486,12 @@
         height: 120px;
         border-radius: 8px;
         object-fit: cover;
-        margin-bottom: 5px;
+        margin: 0 -20px 8px -20px;
+        width: calc(100% + 40px);
     }
 
     .cardImage4 {
-        width: 100%;
+        width: calc(100% + 40px);
         height: 120px;
         margin: 0 -20px 8px -20px;
         object-fit: cover;
@@ -509,11 +512,14 @@
         height: auto;
         top: auto;
         left: auto;
-        font-size: 16px;
+        font-size: 15px;
+        -webkit-line-clamp: unset;
     }
 
     .card5 .cardHeading {
         font-size: 18px;
+        line-height: 1.3;
+        -webkit-line-clamp: unset;
     }
 
     .whiteArrow {
@@ -522,15 +528,23 @@
         position: static;
         top: auto;
         left: auto;
-        margin-top: auto;
+        margin-top: 8px;
     }
 
     .cardHeading {
         font-size: 18px;
+        line-height: 1.3;
+        -webkit-line-clamp: unset;
+        overflow: visible;
+        display: block;
     }
 
     .cardText {
-        font-size: 13px;
+        font-size: 14px;
+        line-height: 1.4;
+        -webkit-line-clamp: unset;
+        overflow: visible;
+        display: block;
     }
 }
 
