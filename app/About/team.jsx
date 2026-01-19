@@ -3,18 +3,18 @@ import { Linkedin } from 'lucide-react';
 
 const TeamMemberCard = ({ name,place, role, description, image, linkedinUrl }) => {
   return (
-    <div className="bg-white rounded-lg border-2 border-gray-200 overflow-hidden w-72 shadow-sm hover:shadow-md transition-shadow">
+    <div className="bg-white rounded-[10] border-2 border-black overflow-hidden w-80 shadow-sm hover:shadow-md transition-shadow ">
       {/* Header with image and LinkedIn */}
       <div className="relative">
         <img 
           src={image} 
           alt={name}
-          className="w-full h-48 object-cover"
+          className="w-[380px] h-[254px] p-3 object-cover "
         />
       </div>
       
       {/* Content */}
-      <div className="p-4">
+      <div className="p-2">
         <h3 className="text-lg font-bold text-gray-900 mb-1">
           {name}
         </h3>
@@ -30,10 +30,10 @@ const TeamMemberCard = ({ name,place, role, description, image, linkedinUrl }) =
         >
         </a>
             <Linkedin className="w-4 h-4 text-white" />*/}
-        <p className="text-sm font-semibold text-gray-600 mb-3">
+        <p className="text-sm font-semibold text-[#000000] mb-3">
           {role}
         </p>
-        <p className="text-sm text-gray-700 leading-relaxed">
+        <p className="text-sm text-[#333333] leading-relaxed mb-3">
           {description}
         </p>
       </div>
@@ -48,7 +48,7 @@ const TeamSection = () => {
       name: "DEEPALI SAINI",
       place:"New Delhi , India",
       role: "Content Writter",
-      description: "At WAIC, we're committed to empowering women to become AI-literate and AI-fluent. Not everyone needs to be a coder, but every woman from every discipline should have the power.",
+      description: "A former Artificial Intelligence Intern at IndiGo Airlines and a fourth-year Bachelor of Technology student in Mathematics and Computing Engineering at Delhi Technological University. I am an aspiring Software Engineer with experience in AI and competitive programming.",
       image: "/DeepaliSaini_contentWriter.jpeg",
       linkedinUrl: "https://linkedin.com"
     },
@@ -69,18 +69,18 @@ const TeamSection = () => {
       linkedinUrl: "https://linkedin.com"
     },
     {
-      name: "SURBHI RACHHUNIJI",
+      name: "Samina Khatoon",
       place:"Hyedrabad, India",
       role: "Web Developer",
-      description: "At WAIC, we're committed to empowering women to become AI-literate and AI-fluent. Not everyone needs to be a coder, but every woman from every discipline should have the power.",
-      image: "/Sneha - Web Developer.jpeg",
+      description: "I’m Shriya, with experience building end-to-end AI and web platforms from data to deployment. I believe technology has the greatest impact when it’s built with clarity, empathy, and intention- especially in spaces that shape inclusion. That belief led me to contribute to building WAIC.",
+      image: " Shria - Web Developer.jpeg",
       linkedinUrl: "https://linkedin.com"
     },
     {
       name: "RARDEEP KAUR",
       place:"Madhya Pradesh , India",
       role: "Web Developer",
-      description: " At WAIC, we're committed to empowering women to become AI-literate and AI-fluent. Not everyone needs to be a coder, but every woman from every discipline should have the power.",
+      description: " I’m Rabdeep Kaur, a Full Stack Developer. Working with WAIC and contributing my skills to support the team’s vision has been a truly meaningful experience, not just in terms of project work, but in being part of a purpose that aims to make AI and the digital space more inclusive and accessible for women.",
       image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=400&fit=crop",
       linkedinUrl: "https://linkedin.com"
     },
@@ -96,8 +96,8 @@ const TeamSection = () => {
       name: "SNEHA DUBEY",
       place:"Mumbai , India",
       role: "Web Developer",
-      description: "At WAIC, we're committed to empowering women to become AI-literate and AI-fluent. Not everyone needs to be a coder, but every woman from every discipline should have the power.",
-      image: "/Shria - Web Developer.jpeg",
+      description: "Hi, I’m Sneha, a Frontend & Backend Developer. My journey at WAIC was about more than just coding I got to work on projects that amplified representation, built trust, and created opportunities in tech. Being part of WAIC showed me how powerful technology can be when it’s inclusive, intentional, and people-focused..",
+      image: "/Sneha - Web Developer.jpeg",
       linkedinUrl: "https://linkedin.com"
     }
   ];
