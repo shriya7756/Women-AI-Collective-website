@@ -16,7 +16,7 @@ export default  function LandingPage(){
 
       <Herosection/>
       <MobileHeroSection/>
-     <WhoWeAreSection/>
+      <WhoWeAreSection/>
      <ImpactSection/>
      <PillarsSection/>
      <FlagShip/>
