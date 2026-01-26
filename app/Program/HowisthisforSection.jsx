@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Howisthisfor.module.css';
+import styles from './WhoIsThisForSection.module.css';
 
 const WhoIsThisForSection = () => {
     return (
