@@ -1,3 +1,4 @@
+import Image from 'next/image'
 export default function JoinUs(){
   return(
     <div className="w-full min-h-[500px] bg-black flex flex-col items-center justify-center px-6 text-center py-16">
@@ -19,7 +20,16 @@ export default function JoinUs(){
           mx-auto
         "
       >
-        A COMMUNITY OF WOMEN BUILDING
+        A COMMUNITY 
+         <Image 
+              src="/Vector 2.png" 
+             width={176}       // match Figma width
+            height={1}  
+              alt="underline" 
+              className=" relative  bottom-3"
+            />
+            {" "}
+        OF WOMEN BUILDING
         THEIR CAREERS AND COMPANIES IN 
         EMERGING TECHNOLOGY AND AI IS
         WAITING FOR YOU.
