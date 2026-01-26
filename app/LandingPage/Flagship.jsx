@@ -70,8 +70,8 @@ export default function FlagShip() {
             className="absolute inset-0 w-full h-full rounded-[40px] bg-[#F1247B] will-change-transform"
             style={{
               transform: `scale(${1 - easedProgress * 0.08}) translateY(${-easedProgress * 80}px)`,
-              opacity: 1 - easedProgress * 0.5,
-              transition: 'transform 0.05s ease-out,  ease-out'
+              opacity: 1 - easedProgress ,
+              transition: 'transform 0.05s ease-out, opacity 0.05s ease-out'
             }}
           >
             {/* Image Container - Left Side */}
@@ -123,7 +123,7 @@ export default function FlagShip() {
             <div className="absolute left-0 top-0 bottom-0 w-1/2 hidden md:flex items-center justify-center p-8">
               <div className="relative w-full h-full">
                 <Image
-                  src="/await where the sand meets the (1) 1.png"
+                  src="/card 2 img.png"
                   fill
                   alt="Coming Soon"
                   className="object-contain"

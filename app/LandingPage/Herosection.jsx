@@ -16,6 +16,7 @@ export default function Herosection(){
        <>
 <section className=" hidden lg:block min-h-screen overflow-hidden  relative">
   {/*background gradient */}
+
   <div className='absolute inset-0 z-0'>
 
    {/*Image positioned absolutely */}
@@ -28,7 +29,7 @@ export default function Herosection(){
     />
   </div>
 
-<div className='sticky top-0 z-[100]  z-10 flex flex-col min-h-screen'>
+<div className='sticky top-0 z-50 flex flex-col min-h-screen'>
   <Navbar1/>
 <div className="mx-auto w-[1000px] h-[48px]  bg-[#06061A]/50 rounded-[10px] px-8 flex items-center justify-center gap-4 shadow-[0px_0px_10px_0px_rgba(255,255,255,0.2)] backdrop-blur-sm">
   
@@ -58,7 +59,7 @@ export default function Herosection(){
       width={400}
       height={200}
       alt="logo"
-      className='w-48 sm:w-64 md:w-80 lg:w-96 mb-5'
+      className='w-48 sm:w-64 md:w-80 lg:w-96 mb-9'
     />
   </div>
 

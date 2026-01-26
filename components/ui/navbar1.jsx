@@ -57,16 +57,15 @@ const Navbar1 = ({
 
 }) => {
   return (
-    <section className="sticky top-0 z-[500] py-8 px-0 md:px-8 lg:px-16">
+    <section className="sticky top-0 z-50 py-4 px-0 md:px-8 lg:px-16">
       <nav
         className=" 
           hidden lg:flex
           mx-auto 
           items-center justify-space-between 
           max-w-[1200px] h-[52px]
-          pt-4  pb-4 pl-8
+          pt-4  pb-4 pl-8 
           rounded-[99px]
-          bg-[rgba(236,241,244,0.03)]
           backdrop-blur-[10px]
           border border-[rgba(255,255,255,0.18)]
           shadow-[inset_1px_1px_2px_rgba(255,255,255,0.3),inset_-1px_-1px_2px_rgba(255,255,255,0.1),inset_0_1px_10px_rgba(255,255,255,0.2)]
