@@ -1,42 +1,76 @@
-import React from 'react';
-import styles from './PillarsSection.module.css'
+'use client';
 
-const WhoIsThisForSection = () => {
+import { useEffect, useState } from 'react';
+import styles from './PillarsSection.module.css';
+
+export default function WhoWeAreSection() {
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+        setIsVisible(true);
+    }, []);
+
     return (
-        <section className={styles.section}>
-            <div className={styles.leftContent}>
-                <img
-                    src="/Who is AI 101  for.jpg"
-                    alt="Who is AI 101 for"
-                    className={styles.forImage}
-                />
-            </div>
+        <section className={styles.heroSection}>
+            <div className={styles.container}>
+                {/* First Section - Text Left, Image Right */}
+                <div className={`${styles.contentRow} ${isVisible ? styles.fadeIn : ''}`}>
+                    <div className={styles.textContent}>
+                        <h1 className={styles.mainHeading}>
+                            Women AI Collective is the first AI literacy platform
+                        </h1>
+                        <p className={styles.subText}>
+                            Designed specifically for women from both non-tech and tech to become AI-literate and AI-fluent.
+                            We believe that in an AI-first world, not knowing how AI works creates a new barrier, keeping women,
+                            especially those from non-tech backgrounds, out of future job opportunities. This isn&apos;t just about
+                            technology. It&apos;s about equality.
+                        </p>
+                        <button className={styles.knowMoreButton}>
+                            <span className={styles.buttonText}>Know more</span>
+                            <div className={styles.arrowContainer}>
+                                <img src="/Pixel Arrow.png" alt="Arrow" className={styles.arrowDefault} />
+                                <img src="/Pixel Arrow straight.png" alt="Arrow" className={styles.arrowHover} />
+                            </div>
+                        </button>
+                    </div>
+                    <div className={styles.imageContent}>
+                        <img
+                            src="/hero-image.png"
+                            alt="Women AI Collective - AI Literacy Platform"
+                            className={styles.heroImage}
+                        />
+                    </div>
+                </div>
 
-            <div className={styles.rightContent}>
-                <span className={styles.subHeading}>Who Is This For?</span>
-                <h2 className={styles.heading}>PERFECT IF YOU'RE</h2>
-
-                <ul className={styles.list}>
-                    <li className={styles.listItem}>
-                        <span className={styles.checkIcon}>✓</span>
-                        High school student trying to build real skills beyond textbooks and classes
-                    </li>
-                    <li className={styles.listItem}>
-                        <span className={styles.checkIcon}>✓</span>
-                        College student wanting to stand out in internships, job applications, freelance work or start earning on the side
-                    </li>
-                    <li className={styles.listItem}>
-                        <span className={styles.checkIcon}>✓</span>
-                        Young professional looking to save time and grow faster using AI
-                    </li>
-                    <li className={styles.listItem}>
-                        <span className={styles.checkIcon}>✓</span>
-                        Small business owner or aspiring founder curious about using AI in practical, everyday ways to scale work or business
-                    </li>
-                </ul>
+                {/* Second Section - Image Left, Text Right */}
+                <div className={`${styles.contentRow} ${styles.contentRowReverse} ${isVisible ? styles.fadeInDelay : ''}`}>
+                    <div className={styles.imageContent}>
+                        <img
+                            src="/hero-image-2.png"
+                            alt="AI Education for Women"
+                            className={styles.heroImage}
+                        />
+                    </div>
+                    <div className={styles.textContent}>
+                        <h2 className={styles.secondHeading}>
+                            Because Your Background Shouldn&apos;t Limit Your Future
+                        </h2>
+                        <p className={styles.secondSubText}>
+                            AI is transforming every industry but the current AI education remains intimidating and technical,
+                            and excludes millions of talented women. Skill disparity is amplifying gender disparity. These women
+                            aren&apos;t lacking capability- they lack access to AI education that speaks their language. The result?
+                            A massive talent pool left behind when we need diverse perspectives in AI the most.
+                        </p>
+                        <button className={styles.knowMoreButton}>
+                            <span className={styles.buttonText}>Know more</span>
+                            <div className={styles.arrowContainer}>
+                                <img src="/Pixel Arrow.png" alt="Arrow" className={styles.arrowDefault} />
+                                <img src="/Pixel Arrow straight.png" alt="Arrow" className={styles.arrowHover} />
+                            </div>
+                        </button>
+                    </div>
+                </div>
             </div>
         </section>
     );
-};
-
-export default WhoIsThisForSection;
+}
