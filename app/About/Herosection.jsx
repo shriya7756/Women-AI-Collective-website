@@ -15,14 +15,13 @@ export default function Herosection(){
         
         {/* Main Heading - z-10 */}
         <h1 
-          className="relative z-10 text-center font-bold text-[#FAFCFE] mb-32"
+          className="relative z-10 text-center font-bold text-[#FAFCFE] mb-20"
           style={{
             fontFamily: 'Work Sans',
             fontSize: 'clamp(32px, 5vw, 64px)',
             lineHeight: '1.1',
             letterSpacing: '-0.04em',
-            width: '1073px',
-            maxWidth: '90%'
+            maxWidth: '100%'
           }}
         >
           Democratizing{" "}
@@ -42,15 +41,15 @@ export default function Herosection(){
               className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-full max-w-[176px]"
             />
           </span>
-          {" "}for{" "}
-          <span className="relative inline-block text-center font-medium italic"
+          {" "}for
+          <span className="relative inline-block text-center font-normal italic"
             style={{
               fontFamily: 'Fraunces',
               fontSize: 'clamp(32px, 5vw, 64px)',
               lineHeight: '1.1',
               letterSpacing: '-0.01em'
             }}>
-            Indian women
+            Indian 
             <Image 
               src="/Vector 3.png" 
               width={176}
@@ -59,7 +58,17 @@ export default function Herosection(){
               className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-full max-w-[176px]"
             />
           </span>
-          {" "}to build an inclusive Digital space and unlock financial freedom.
+<br></br>
+          {" "} 
+          <span className=" font-normal italic"> women <Image 
+              src="/Vector 3.png" 
+              width={176}
+              height={1}  
+              alt="underline" 
+              className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-full max-w-[176px]"
+            /></span>  to build an inclusive Digital 
+          <br></br>
+          space  and unlock financial freedom.
         </h1>
       </section>
          <div className="relative w-full ">

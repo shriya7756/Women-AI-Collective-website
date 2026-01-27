@@ -20,14 +20,20 @@ export default function JoinUs(){
           mx-auto
         "
       >
-        A COMMUNITY 
+        <span>
+        A 
+        </span>
+        {" "}
+        <span className='relative inline-block text-pink-100'>
+        COMMUNITY 
          <Image 
-              src="/Vector 2.png" 
-             width={176}       // match Figma width
-            height={1}  
-              alt="underline" 
-              className=" relative  bottom-3"
-            />
+      src="/Vector 2.png" 
+      width={176}
+      height={1}  
+      alt="underline" 
+      className="absolute left-0 -bottom-2 w-full"
+    />
+    </span>
             {" "}
         OF WOMEN BUILDING
         THEIR CAREERS AND COMPANIES IN 

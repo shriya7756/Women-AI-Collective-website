@@ -81,7 +81,7 @@ const TeamSection = () => {
       place:"Madhya Pradesh , India",
       role: "Web Developer",
       description: " I’m Rabdeep Kaur, a Full Stack Developer. Working with WAIC and contributing my skills to support the team’s vision has been a truly meaningful experience, not just in terms of project work, but in being part of a purpose that aims to make AI and the digital space more inclusive and accessible for women.",
-      image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=400&fit=crop",
+      image: "/Untitled design (1).png",
       linkedinUrl: "https://linkedin.com"
     },
     {
