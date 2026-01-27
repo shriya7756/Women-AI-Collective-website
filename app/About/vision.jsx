@@ -3,6 +3,7 @@ import Image from "next/image";
 export default function Vision() {
   return (
     <main className="w-full min-h-screen">
+  
       {/* ===== GRID WRAPPER ===== */}
       <section className="grid grid-cols-1 md:grid-cols-2">
 
