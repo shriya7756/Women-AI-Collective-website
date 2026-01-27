@@ -28,12 +28,12 @@ export default function MobileHeroSection() {
   
   
 
-      <div className="relative z-10 flex flex-col min-h-screen">
+      <div className="sticky top-0 z-10 flex flex-col ">
         {/* Navbar */}
-        <Navbar1 />
+        <Navbar1/>
            {/* Announcement Banner */}
           <div className="w-full max-w-md ">
-            <div className="bg-[#06061A]/50 rounded-[10px] px-4 py-1 flex items-start gap-3 shadow-[0px_0px_10px_0px_rgba(255,255,255,0.2)] backdrop-blur-sm">
+            <div className="bg-[#06061A]/50 px-4 py-1 flex items-start gap-3 shadow-[0px_0px_10px_0px_rgba(255,255,255,0.2)] backdrop-blur-sm">
               <div className="relative w-5 h-5 flex-shrink-0 mt-0.5">
                 <div
                   className="absolute top-0 left-0 w-5 h-5 rounded-full"
@@ -55,7 +55,7 @@ export default function MobileHeroSection() {
           </div>
 
         {/* Main Content Container */}
-        <div className="flex-1 flex flex-col items-center justify-center px-4 ">
+        <div className="flex-1 flex flex-col items-center justify-center px-4 mt-9">
           
           {/* Logo */}
           <div className="top-192">
@@ -64,17 +64,17 @@ export default function MobileHeroSection() {
               width={280}
               height={100}
               alt="Women AI Collective Logo"
-              className="w-[315px] h-[189px] "
+              className="w-[315px] h-[189px] mb-6"
             />
           </div>
 
 
           {/* Main Heading */}
           <h1 className="text-center mb-3 py-2 px-2">
-            <span className="block  font-Fraunces font-normal text-2xl leading-tight text-[#FAFCFE] mt-10">
+            <span className="block  font-Fraunces font-bold text-2xl leading-tight text-[#FAFCFE] mt-10">
               We are on a mission
             </span>
-            <span className="block font-fraunces font-normal text-2xl leading-tight text-[#FAFCFE] ">
+            <span className="block font-fraunces font-bold text-2xl leading-tight text-[#FAFCFE] ">
               to Empower  {" "}
               <span className={`${fraunces.className} relative font-fraunces inline-block italic font-semibold text-2xl leading-tight text-[#FAFCFE]`}>
                 Young

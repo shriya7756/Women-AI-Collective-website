@@ -13,8 +13,10 @@ import Navbar1 from "../../components/ui/navbar1";
 
 export  default function Program(){
     return(
-        <div className=" min-h-screen bg-black">
-            <Navbar1/>
+        <div className=" min-h-screen  bg-[#06061A]">
+        <div className="sticky top-0 z-50 flex flex-col bg-transparent">
+          <Navbar1/>
+          </div>
             <Herosection/>
             {/* <MobileHeroSection/> */}
             <HowisthisforSection/>

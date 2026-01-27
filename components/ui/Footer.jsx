@@ -92,7 +92,7 @@ export default function Footer() {
   <img
     src="/footer-graphic.png"
     alt="footer graphic"
-    className="absolute inset-0 w-full h-auto opacity-100 -z-10 pointer-events-none"
+    className="absolute inset-0 w-full h-full opacity-90 -z-10 pointer-events-none"
   />
   </div>
       {/* Big Text - Positioned absolutely to overlap */}

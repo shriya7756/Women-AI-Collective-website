@@ -6,6 +6,8 @@ import { Button } from "../../components/ui/button";
 
 export default function ProgramPage() {
   return (
+    <>
+  
     <main className="min-h-screen bg-[#06061A] text-white font-sans">
 
   <section className="py-14 px-6 md:px-16 lg:px-20 bg-[#06061A]">
@@ -23,7 +25,7 @@ export default function ProgramPage() {
     <h1 className=" text-3xl md:text-5xl  font-extrabold leading-tight  absolute top-80 left-4 translate-y-[6px]  md:static md:translate-y-0  md:mt-0  ">
      ARTIFICIAL <br /> INTELLIGENCE 101 </h1>
 
-      <p className="  text-sm md:text-[15px] leading-relaxed opacity-80 max-w-full md:max-w-[520px] relative mt-[130px] md:mt-4 -translate-x-[20px] md:translate-x-0  translate-y-[60px] md:translate-y-0  px-0 text-left md:px-0 ">
+      <p className="  text-sm md:text-[15px] py-10 leading-relaxed opacity-80 max-w-full md:max-w-[520px] relative mt-[130px] md:mt-4 -translate-x-[20px] md:translate-x-0  translate-y-[60px] md:translate-y-0  px-0 text-left md:px-0 ">
       For every girl told “tech isn’t for
       <br className="md:hidden" />
       you”, we say “AI is your superpower.”
@@ -101,6 +103,7 @@ export default function ProgramPage() {
       </section>
 
     </main>
+    </>
   );
 }
 

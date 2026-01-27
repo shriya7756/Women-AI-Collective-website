@@ -9,7 +9,10 @@ import MozFestSection from './MozFestSection';
 import GetInvolved from './GetInvolved';
 export default function AboutPage() {
     return (
-     <div className='min-h-screen'>
+     <div className='min-h-screen bg-gray-400'>
+        <div className="sticky top-0 z-50 flex flex-col bg-transparent">
+          <Navbar1/>
+          </div>
         <Herosection/>
         <Vision/>
 <OurFounderSection/>
