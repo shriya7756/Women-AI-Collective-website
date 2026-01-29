@@ -1,6 +1,7 @@
 "use client"
 
-import { Book, Menu, Sunset, Trees, Zap } from "lucide-react";
+import { Book, Menu, Sunset, Trees, Zap ,X} from "lucide-react";
+
 import Image from 'next/image'
 import {
   Accordion,
@@ -23,6 +24,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
+  SheetClose
 } from "../ui/sheet";
 
 const Navbar1 = ({
@@ -114,40 +116,47 @@ const Navbar1 = ({
             />
           </a>
           <Sheet>
-            <SheetTrigger asChild>
-              <Button 
-                variant="ghost" 
-                size="icon"
-                className="text-[#8C8CA1] hover:bg-[rgba(255,255,255,0.1)]"
-              >
-                <Menu className="size-6" />
-              </Button>
-            </SheetTrigger>
-            <SheetContent 
-              className="overflow-y-auto
-                
-                backdrop-blur-[10px]
-                border-l border-[rgba(255,255,255,0.18)]"
-            >
-              <SheetHeader>
-                <SheetTitle>
-                  <a href={logo.url} className="flex items-center gap-2">
-                    <Image 
-                      src="/logo1.png" 
-                      width={60}
-                      height={40}
-                      alt={logo.alt} 
-                    />
-                  </a>
-                </SheetTitle>
-              </SheetHeader>
-              <div className="flex flex-col gap-6 p-4">
-                <Accordion type="single" collapsible className="flex w-full flex-col gap-4">
-                  {menu.map((item) => renderMobileMenuItem(item))}
-                </Accordion>
-              </div>
-            </SheetContent>
-          </Sheet>
+  <SheetTrigger asChild>
+    <Button 
+      variant="ghost" 
+      size="icon"
+      className="text-[#8C8CA1] hover:bg-[rgba(255,255,255,0.1)]"
+    >
+      <Menu className="size-6 mr-15" />
+    </Button>
+  </SheetTrigger>
+  <SheetContent 
+    className="y-auto h-90 bg-[#31091EB2] backdrop-blur-[50px] "
+  >
+    <SheetHeader className="relative">
+      <SheetTitle>
+        <a href={logo.url} className="flex items-center gap-2">
+          <Image 
+            src="/logo1.png" 
+            width={60}
+            height={40}
+            alt={logo.alt} 
+          />
+        </a>
+      </SheetTitle>
+      {/* Close Button */}
+      <SheetClose asChild>
+        <Button
+          variant="ghost"
+          size="icon"
+          className="absolute right-0 top-0 text-[#8C8CA1] hover:bg-[rgba(255,255,255,0.1)]"
+        >
+          <X className="size-6 " />
+        </Button>
+      </SheetClose>
+    </SheetHeader>
+    <div className="flex flex-col gap-6 p-4">
+      <Accordion type="single" collapsible className=" text-white flex w-full flex-col gap-4">
+        {menu.map((item) => renderMobileMenuItem(item))}
+      </Accordion>
+    </div>
+  </SheetContent>
+</Sheet>
         </div>
       </div>
 
@@ -186,7 +195,7 @@ const renderMobileMenuItem = (item) => {
   if (item.items) {
     return (
       <AccordionItem key={item.title} value={item.title} className="border-b-0">
-        <AccordionTrigger className="text-md py-0 font-semibold hover:no-underline text-[#8C8CA1]">
+        <AccordionTrigger className="text-md py-0 font-semibold hover:no-underline text-white ">
           {item.title}
         </AccordionTrigger>
         <AccordionContent className="mt-2">
@@ -199,7 +208,7 @@ const renderMobileMenuItem = (item) => {
   }
 
   return (
-    <a key={item.title} href={item.url} className="text-md font-semibold text-[#8C8CA1] hover:text-white transition-colors">
+    <a key={item.title} href={item.url} className="text-md font-semibold text-[#FAFCFE] hover:text-white transition-colors">
       {item.title}
     </a>
   );
@@ -214,7 +223,7 @@ const SubMenuLink = ({
       href={item.url}>
       <div className="text-foreground">{item.icon}</div>
       <div>
-        <div className="text-sm font-semibold">{item.title}</div>
+        <div className="text-[#FAFCFE] font-semibold">{item.title}</div>
         {item.description && (
           <p className="text-muted-foreground text-sm leading-snug">
             {item.description}
