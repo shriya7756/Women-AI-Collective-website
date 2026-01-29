@@ -1,4 +1,5 @@
 import Image from 'next/image'
+
 export default function JoinUs(){
   return(
     <div className="w-full min-h-[500px] bg-black flex flex-col items-center justify-center px-6 text-center py-16">
@@ -42,9 +43,10 @@ export default function JoinUs(){
         ARE YOU UP FOR IT?
       </h1>
 
-     <button className="mt-8 px-8 py-4 w-[300px] h-[50px] border rounded-[20px] bg-pink-500 text-xl font-bold hover:bg-pink-600 transition shadow-lg hover:shadow-xl flex items-center justify-center">
-  <span className="text-white">JOIN THE AI PROGRAM</span>
-</button>
+      <button className="h-10 mt-6 px-6 md:px-8 bg-[#F1247B] font-bold text-[18px] text-[#FFFFFF] font-semibold text-sm md:text-base lg:text-lg rounded-[10px] hover:bg-[#F1247B] hover:shadow-4xl active:scale-100 active:shadow-inner transition-all duration-150"
+   >
+        JOIN THE AI 101 PROGRAM
+      </button>
     </div>
   )
 }
