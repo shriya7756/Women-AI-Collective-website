@@ -23,7 +23,8 @@ export default function Vision() {
   <span className="font-bold text-[18px]">
   This isn’t just about technology. It’s about equality.</span> </p>
  </div> 
- <div className="relative w-[720px] h-[513px] md:h-full">
+    
+ <div className="relative w-[751px] h-[513px] w-full">
 <Image src="/books img.png" alt="Bookshelf" fill className="object-cover" priority /> </div>
 
       
