@@ -1,0 +1,880 @@
+.pillarsWrapper {
+    width: 100%;
+    min-height: 1200px;
+    background: url('/img_rectangle_5.png') no-repeat center center,
+        url('/Rectangle 6.png') no-repeat center center,
+        #06061A;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 160px 70px 100px;
+    position: relative;
+    overflow: hidden;
+    /* start pillars after previous section (no overlap) */
+    margin-top: 0;
+    /* Organic wavy top using mask-image */
+    mask-image: url("data:image/svg+xml,%3Csvg width='1440' height='100' viewBox='0 0 1440 100' preserveAspectRatio='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 100V40C150 10 300 80 450 40C600 0 750 80 900 40C1050 0 1200 80 1440 40V100H0Z' fill='black'/%3E%3C/svg%3E"), linear-gradient(black 100px, black);
+    mask-size: 100% 100px, 100% 100%;
+    mask-repeat: no-repeat;
+    mask-position: top, center;
+}
+
+.pillarsWrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.12;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.container {
+    max-width: 1440px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+}
+
+.heading {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 100%;
+    letter-spacing: -3%;
+    text-transform: uppercase;
+    color: #06061A;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+}
+
+.heading.fadeIn {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dottedRectangle {
+    width: 1300px;
+    min-height: auto;
+    height: auto;
+    border-radius: 10px;
+    border: 1px dashed #666666;
+    background: rgba(236, 241, 244, 0.1);
+    padding: 40px;
+    position: relative;
+    opacity: 0;
+    transform: scale(0.98);
+    transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dottedRectangle.fadeInScale {
+    opacity: 0.7;
+    transform: scale(1);
+}
+
+/* Precise Divider Lines */
+.verticalLine {
+    position: absolute;
+    width: 1px;
+    height: 470px;
+    background: #666666;
+    left: 617px;
+    top: 40px;
+    opacity: 0.7;
+
+}
+
+.horizontalLineLeft {
+    position: absolute;
+    width: 530px;
+    height: 1px;
+    background: #666666;
+    top: 275px;
+    left: 40px;
+    opacity: 0.7;
+
+}
+
+.horizontalLineRight {
+    position: absolute;
+    width: 604px;
+    height: 1px;
+    background: #666666;
+    top: 275px;
+    left: 650px;
+    opacity: 0.7;
+
+}
+
+.horizontalLineBottom {
+    position: absolute;
+    width: 1220px;
+    height: 1px;
+    background: #666666;
+    top: 530px;
+    left: 40px;
+    opacity: 0.7;
+
+}
+
+.pillarsGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px 50px;
+    position: relative;
+    width: 100%;
+}
+
+/* Pillar items: separators and spacing for mobile-like stacked layout */
+.pillarItem {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 0 0 0;
+}
+
+
+.pillarItem {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 0;
+}
+
+.pillarFull {
+    grid-column: span 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    margin-top: 0;
+    padding-bottom: 0;
+    /* ensure text does not sit under the absolutely positioned image */
+    padding-right: 320px;
+    position: relative;
+    min-height: auto;
+}
+
+.pillarContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.pillarNumber {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 3%;
+    text-transform: capitalize;
+    color: #4A4A68;
+    margin: 0;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+.pillarTitle {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 100%;
+    letter-spacing: -2%;
+    color: #000000;
+    margin: 0;
+    display: block;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    max-width: 100%;
+}
+
+.pillarText {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    letter-spacing: 0%;
+    color: #06061A;
+    margin: 0;
+    max-width: 546px;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.pillarImageOnly {
+    /* Desktop: absolutely position to the right of the pillar 5 content and vertically center */
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+    margin: 0;
+    z-index: 2;
+}
+
+.pillarImage {
+    width: 260px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+
+
+@media (max-width: 1400px) {
+    .pillarsWrapper {
+        padding: 120px 40px 80px;
+    }
+
+    .dottedRectangle {
+        width: 100%;
+        max-width: 1300px;
+        height: auto;
+        padding: 40px;
+    }
+
+    .verticalLine,
+    .horizontalLineLeft,
+    .horizontalLineRight,
+    .horizontalLineBottom {
+        display: none;
+    }
+
+    .pillarsGrid {
+        gap: 60px;
+    }
+
+    /* Removed pillarFull column switch so it stays row on laptops */
+}
+
+/* New Tablet Breakpoint */
+
+/* Adjust image for medium desktop/laptop widths */
+@media (max-width: 1000px) {
+    .pillarFull {
+        padding-right: 280px;
+    }
+
+    .pillarImage {
+        width: 240px;
+        height: auto;
+    }
+}
+
+@media (max-width: 640px) {
+    .pillarFull {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+        /* mobile: remove extra right padding so layout is full width */
+        padding-right: 0;
+    }
+
+    .pillarImageOnly {
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: none;
+        margin-top: 20px;
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .pillarImage {
+        width: 220px;
+        height: auto;
+    }
+}
+
+@media (max-width: 640px) {
+    .pillarsWrapper {
+        padding: 40px 20px;
+        min-height: auto;
+        background: url('/Desktop - 2.png') no-repeat center center;
+        background-size: cover;
+        mask-image: none;
+        mask-size: none;
+        mask-repeat: none;
+        mask-position: none;
+    }
+
+    .dottedRectangle {
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+        border: none;
+        background: transparent;
+        margin: 0;
+    }
+
+    .heading {
+        font-size: 28px;
+        color: #000000;
+        margin-bottom: 30px;
+    }
+
+    .pillarsGrid {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        width: 100%;
+        max-width: 375px;
+        margin: 0 auto;
+    }
+
+    .pillarItem {
+        width: 100%;
+        padding: 20px 0;
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .pillarItem:not(:last-child) {
+        border-bottom: 1px solid #666666;
+        padding-bottom: 20px;
+        margin-bottom: 0;
+    }
+
+    .pillarNumber {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 100%;
+        margin: 0;
+        color: #4A4A68;
+    }
+
+    .pillarTitle {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 100%;
+        letter-spacing: -2%;
+        margin: 0;
+        color: #000000;
+    }
+
+    .pillarText {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 140%;
+        margin: 0;
+        color: #06061A;
+    }
+
+    .pillarImageOnly {
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: none;
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .pillarImage {
+        width: 240px;
+        height: auto;
+        object-fit: contain;
+        align-self: center;
+        margin-top: 20px;
+    }
+}
+
+/* iPhone SE and smaller mobile devices: max-width 375px */
+@media (max-width: 375px) {
+    .pillarsWrapper {
+        padding: 40px 16px;
+        min-height: auto;
+        background: url('/How we solve the problem- mobile bg.png') no-repeat center center;
+        background-size: cover;
+        mask-image: none;
+        mask-size: none;
+        mask-repeat: none;
+        mask-position: none;
+    }
+
+    .dottedRectangle {
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+        border: none;
+        background: transparent;
+        margin: 0;
+    }
+
+    .heading {
+        font-size: 24px;
+        color: #FFFFFF;
+        margin-bottom: 25px;
+    }
+
+    .pillarsGrid {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .pillarItem {
+        width: 100%;
+        padding: 20px 0;
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .pillarItem:not(:last-child) {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        opacity: 1;
+        padding-bottom: 20px;
+        margin-bottom: 0;
+    }
+
+    .pillarNumber {
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 100%;
+        margin: 0;
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    .pillarTitle {
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 1.2;
+        letter-spacing: -1%;
+        margin: 0;
+        color: #FFFFFF;
+    }
+
+    .pillarText {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 1.4;
+        margin: 0;
+        color: rgba(255, 255, 255, 0.9);
+    }
+
+    .pillarImageOnly {
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: none;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .pillarImage {
+        width: 200px;
+        height: auto;
+        object-fit: contain;
+    }
+}
+
+/*Who we are */
+.heroSection {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 60px;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    background: linear-gradient(220.69deg, #FAFCFE 11.2%, #FFAEDC 50%, #FAFCFE 88.8%);
+    position: relative;
+    overflow: hidden;
+}
+
+.heroSection::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.1;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.heroSection::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(220.69deg, #FAFCFE 11.2%, #FFAEDC 50%, #FAFCFE 88.8%);
+    opacity: 0;
+    animation: gradientPulse 8s ease-in-out infinite;
+}
+
+@keyframes gradientPulse {
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+}
+
+.container {
+    max-width: 1440px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Horizontal Layout Rows */
+.contentRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contentRow.fadeIn {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.contentRow.fadeInDelay {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.3s;
+}
+
+.contentRowReverse {
+    flex-direction: row;
+}
+
+.textContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 640px;
+    overflow: hidden;
+}
+
+.imageContent {
+    flex: 0 0 440px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Typography */
+.mainHeading {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 100%;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: #06061A;
+    margin: 0;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+}
+
+.subText {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    letter-spacing: 0;
+    color: #4A4A68;
+    margin: 0;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+.secondHeading {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 100%;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: #06061A;
+    margin: 0;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+}
+
+.secondSubText {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    letter-spacing: 0;
+    color: #4A4A68;
+    margin: 0;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Image Styling */
+.heroImage {
+    width: 440px;
+    height: 440px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(255, 174, 220, 0.3);
+    transition: all 0.3s ease;
+}
+
+.heroImage:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 50px rgba(255, 174, 220, 0.4);
+}
+
+/* Button Styling */
+.knowMoreButton {
+    width: 156.39px;
+    height: 41.39px;
+    border-radius: 8px;
+    padding: 6px 14px;
+    background: #FAFCFE;
+    border: 2px solid #06061A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.buttonText {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #06061A;
+    white-space: nowrap;
+}
+
+.arrowContainer {
+    width: 29.39px;
+    height: 29.39px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrowDefault,
+.arrowHover {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.arrowHover {
+    opacity: 0;
+}
+
+.knowMoreButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(6, 6, 26, 0.1);
+}
+
+.knowMoreButton:hover .arrowDefault {
+    opacity: 0;
+}
+
+.knowMoreButton:hover .arrowHover {
+    opacity: 1;
+}
+
+.knowMoreButton:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 10px rgba(6, 6, 26, 0.15);
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+    .contentRow {
+        gap: 60px;
+    }
+
+    .imageContent {
+        flex: 0 0 380px;
+    }
+
+    .heroImage {
+        width: 380px;
+        height: 380px;
+    }
+
+    .mainHeading,
+    .secondHeading {
+        font-size: 42px;
+    }
+
+    .subText,
+    .secondSubText {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 640px) {
+    .heroSection {
+        padding: 60px 30px;
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+    }
+
+    /* increase vertical spacing on mobile */
+    .container {
+        gap: 100px;
+    }
+
+    /* Ensure image appears before text on mobile for both sections:
+       - For rows that are reversed on desktop keep normal column order
+       - For standard rows (text then image on desktop) show image first on mobile */
+    .contentRowReverse {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .contentRow:not(.contentRowReverse) {
+        flex-direction: column-reverse;
+        gap: 40px;
+    }
+
+    .textContent {
+        max-width: 100%;
+        /* Mobile: use left alignment for better readability */
+        text-align: left;
+        align-items: stretch;
+    }
+
+    .imageContent {
+        flex: 0 0 auto;
+    }
+
+    .heroImage {
+        width: 320px;
+        height: 320px;
+    }
+
+    .mainHeading,
+    .secondHeading {
+        font-size: 36px;
+        letter-spacing: -0.02em;
+        text-align: left;
+    }
+
+    .subText,
+    .secondSubText {
+        font-size: 16px;
+        line-height: 150%;
+        text-align: left;
+    }
+
+    .knowMoreButton {
+        width: 140px;
+        height: 38px;
+    }
+
+    .buttonText {
+        font-size: 14px;
+    }
+
+    .arrowIcon {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .heroSection {
+        padding: 40px 20px;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+    }
+
+    .container {
+        gap: 40px;
+    }
+
+    .contentRow {
+        gap: 30px;
+    }
+
+    .heroImage {
+        width: 280px;
+        height: 280px;
+    }
+
+    .mainHeading,
+    .secondHeading {
+        font-size: 28px;
+    }
+
+    .subText,
+    .secondSubText {
+        font-size: 15px;
+    }
+
+    .knowMoreButton {
+        width: 130px;
+        height: 36px;
+    }
+
+    .buttonText {
+        font-size: 13px;
+    }
+
+    .arrowIcon {
+        width: 20px;
+        height: 20px;
+    }
+}
