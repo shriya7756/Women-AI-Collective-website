@@ -64,22 +64,20 @@ export default function Vision() {
           />
         </div>
 
-        {/* ===== RIGHT BOTTOM : MISSION (YELLOW) ===== */}
-        <div className="bg-yellow-400 px-8 py-12 md:px-14 md:py-16">
-          <p className="uppercase text-sm font-semibold tracking-widest text-black opacity-80">
-            Our Mission
-          </p>
+  <div className="bg-yellow-400 px-8 py-12 md:px-14 md:py-16">
+    <p className=" text-[20px] font-bold tracking-widest text-[#06061A] mb-6">
+       Our Mission </p>
 
-          <h2 className="text-3xl md:text-4xl font-extrabold mt-4 leading-tight text-black">
-            HELP 1000 GIRLS AND WOMEN IN INDIA MASTER AI BY 2027
-          </h2>
+    <h2 className="max-w-[595px] text-[32px] md:text-[50px] font-[700] uppercase leading-tight text-black">
+        Help 1000 GIRLS and WOMEN IN INDIA Master AI BY 2027
+            </h2>
 
-          <p className="mt-6 text-sm md:text-base leading-relaxed text-black max-w-xl">
-            At WAIC, we’re committed to empowering women to become AI-literate
-            and AI-fluent. Not everyone needs to be a coder, but every woman
-            from every discipline should have the power to understand, use,
-            and question the technology shaping our lives.
-          </p>
+  <p className="mt-6 w-[532px] text-[18px] font-[work sans] leading-[34px] text-[#333333]">
+     At WAIC, we're committed to empowering women to <br />
+     become AI-literate and AI-fluent. Not everyone needs to be <br />
+      a coder, but every woman from every discipline should have <br />
+       the power to understand, use, and question the technology <br />
+       shaping our lives. </p>
         </div>
 
       </section>
