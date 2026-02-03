@@ -1,16 +1,10 @@
-import Image from "next/image";
-import LandingPage from "./LandingPage/page"
-import About from "./About/page"
-import Program from "./Program/page"
 
+import LandingPage from "./LandingPage/page"
 
 export default function Page() {
   return (
-    <div>
+    <div className="min-h-screen bg-black ">
       <LandingPage/>
-      <Program/>
-      <About/>
-      
     </div>
   );
 }

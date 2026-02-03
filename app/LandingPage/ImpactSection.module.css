@@ -1,0 +1,137 @@
+.impactWrapper {
+    width: 100%;
+    min-height: 520px;
+    background: #06061A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 32px;
+}
+
+.impactBox {
+    width: 352px;
+    height: 200px;
+    border-radius: 40px;
+    background: rgba(236, 241, 244, 0.012);
+    /* #ECF1F403 */
+    padding: 55px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+    flex-shrink: 0;
+
+    /* Specified Inset Shadows */
+    box-shadow:
+        inset 1px 1px 2px 0px rgba(255, 255, 255, 0.3),
+        /* #FFFFFF4D */
+        inset -1px -1px 2px 0px rgba(255, 255, 255, 0.1),
+        /* #FFFFFF1A */
+        inset 0px 1px 10px 0px rgba(255, 255, 255, 0.3);
+    /* #FFFFFF4D */
+
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.impactBox.fadeIn {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.iconWrapper {
+    width: 100%;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -45px;
+    /* Half of 90 */
+}
+
+.icon {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+}
+
+.value {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 100%;
+    letter-spacing: -3%;
+    text-transform: uppercase;
+    color: #ECF1F4;
+}
+
+.label {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 3%;
+    text-transform: capitalize;
+    color: #FFFFFF;
+}
+
+/* Responsive */
+@media (max-width: 1150px) {
+    .container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .impactWrapper {
+        min-height: auto;
+        padding: 60px 20px;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+
+    .impactBox {
+        width: 100%;
+        max-width: 352px;
+    }
+}
+
+@media (max-width: 480px) {
+    .impactWrapper {
+        padding: 60px 16px;
+    }
+
+    .value {
+        font-size: 40px;
+    }
+
+    .label {
+        font-size: 18px;
+    }
+}

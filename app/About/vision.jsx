@@ -2,34 +2,66 @@ import Image from "next/image";
 
 export default function Vision() {
   return (
-  <main className="w-full min-h-screen">
-  <section className="grid grid-cols-1 md:grid-cols-2">
-        
-    <div className="bg-pink-600 text-white px-8 py-12 md:px-14 md:py-16  width-[720px] height-[512px]">
-    <p className="text-[20px] font-bold tracking-widest text-left">
-       Our Vision</p>
+    <main className="w-full min-h-screen">
+  
+      {/* ===== GRID WRAPPER ===== */}
+      <section className="grid grid-cols-1 md:grid-cols-2">
 
-  <h1 className="text-4xl md:text-5xl font-extrabold mt-4 leading-tight max-w-[720px]">
-    WHY WOMEN AI <br />
-    COLLECTIVE EXISTS</h1>
+        {/* ===== LEFT TOP : VISION (PINK) ===== */}
+        <div className="bg-pink-600 text-white px-8 py-12 md:px-14 md:py-16">
+          <p className="uppercase text-sm font-semibold tracking-widest opacity-80">
+            Our Vision
+          </p>
 
- <p className="mt-6 text-left leading-[1.4] text-[#ECF1F4] max-w-[520px] tracking-normal">
-   Education for girls is no longer a privilege — it’s a right <br />
-   every woman holds. But having a career still depends <br />
-   on privilege. It’s time to change that. We believe that in <br />
-   an AI-first world, not knowing how AI works creates a <br />
-   new barrier, keeping women, especially from non-tech <br />
-   backgrounds, out of future job opportunities. <br />
-  <span className="font-bold text-[18px]">
-  This isn’t just about technology. It’s about equality.</span> </p>
- </div> 
-    
- <div className="relative w-[751px] h-[513px] w-full">
-<Image src="/books img.png" alt="Bookshelf" fill className="object-cover" priority /> </div>
+          <h1 className="text-3xl md:text-4xl font-extrabold mt-4 leading-tight">
+            WHY WOMEN AI <br />
+            COLLECTIVE EXISTS
+          </h1>
 
-      
-  <div className="bg-white px-8 py-12 md:px-14 md:py-16 flex flex-col items-center justify-center text-center  width-[720px] height-[512px]">
-   <Image src="/what our girls say img.png" alt="Word Cloud" width={712} height={513} className="object-contain"/>
+          <p className="mt-6 text-sm md:text-base leading-relaxed opacity-90 max-w-xl">
+            Education for girls is no longer a privilege — it’s a right every
+            woman holds. But having a career still depends on privilege.
+            <br /><br />
+            It’s time to change that. We believe that in an AI-first world, not
+            knowing how AI works creates a new barrier, keeping women,
+            especially from non-tech backgrounds, out of future job
+            opportunities.
+            <br /><br />
+            <span className="font-semibold">
+              This isn’t just about technology. It’s about equality.
+            </span>
+          </p>
+        </div>
+
+        {/* ===== RIGHT TOP : IMAGE ===== */}
+        <div className="relative w-full h-[300px] md:h-full">
+          <Image
+            src="/books img.png"   // place image in /public/books.jpg
+            alt="Bookshelf"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+
+        {/* ===== LEFT BOTTOM : WORD CLOUD ===== */}
+        <div className="bg-white px-8 py-12 md:px-14 md:py-16 flex flex-col items-center justify-center text-center">
+          <h2 className="text-pink-600 font-bold text-xl md:text-2xl mb-4">
+            What girls had to say...
+          </h2>
+
+          <p className="text-sm md:text-base text-gray-700 max-w-lg mb-6">
+            When you think about the relationship between AI/tech and women &
+            girls, what’s one word or emoji that captures how you feel?
+          </p>
+
+          <Image
+            src="/left 2.png"      // place image in /public/wordcloud.png
+            alt="Word Cloud"
+            width={420}
+            height={260}
+            className="object-contain"
+          />
         </div>
 
   <div className="bg-yellow-400 px-8 py-12 md:px-14 md:py-16">
