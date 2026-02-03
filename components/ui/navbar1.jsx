@@ -1,13 +1,15 @@
-"use client";;
-import { Book, Menu, Sunset, Trees, Zap } from "lucide-react";
+"use client"
 
+import { Book, Menu, Sunset, Trees, Zap ,X} from "lucide-react";
+
+import Image from 'next/image'
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion";
-import { Button } from "@/components/ui/button";
+} from "../../components/ui/accordion";
+import { Button } from "../ui/button";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -15,14 +17,15 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
+} from "../ui/navigation-menu";
 import {
   Sheet,
   SheetContent,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/components/ui/sheet";
+  SheetClose
+} from "../ui/sheet";
 
 const Navbar1 = ({
   logo = {
@@ -33,154 +36,130 @@ const Navbar1 = ({
   },
 
   menu = [
-    { title: "Home", url: "#" },
+    { title: "Home", url: "./LandingPage" },
     {
-      title: "Products",
-      url: "#",
-      items: [
-        {
-          title: "Blog",
-          description: "The latest industry news, updates, and info",
-          icon: <Book className="size-5 shrink-0" />,
-          url: "#",
-        },
-        {
-          title: "Company",
-          description: "Our mission is to innovate and empower the world",
-          icon: <Trees className="size-5 shrink-0" />,
-          url: "#",
-        },
-        {
-          title: "Careers",
-          description: "Browse job listing and discover our workspace",
-          icon: <Sunset className="size-5 shrink-0" />,
-          url: "#",
-        },
-        {
-          title: "Support",
-          description:
-            "Get in touch with our support team or visit our community forums",
-          icon: <Zap className="size-5 shrink-0" />,
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Resources",
-      url: "#",
-      items: [
-        {
-          title: "Help Center",
-          description: "Get all the answers you need right here",
-          icon: <Zap className="size-5 shrink-0" />,
-          url: "#",
-        },
-        {
-          title: "Contact Us",
-          description: "We are here to help you with any questions you have",
-          icon: <Sunset className="size-5 shrink-0" />,
-          url: "#",
-        },
-        {
-          title: "Status",
-          description: "Check the current status of our services and APIs",
-          icon: <Trees className="size-5 shrink-0" />,
-          url: "#",
-        },
-        {
-          title: "Terms of Service",
-          description: "Our terms and conditions for using our services",
-          icon: <Book className="size-5 shrink-0" />,
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Pricing",
-      url: "#",
+      title: "About",
+      url: "./About",
+      
     },
     {
       title: "Blog",
       url: "#",
+      
+    },
+    {
+      title: "Program",
+      url: "./Program",
+    },
+    {
+      title: "Contact",
+      url: "#",
     },
   ],
 
-  auth = {
-    login: { title: "Login", url: "#" },
-    signup: { title: "Sign up", url: "#" },
-  }
 }) => {
   return (
-    <section className="py-4">
-      <div className="container">
-        {/* Desktop Menu */}
-        <nav className="hidden items-center justify-between lg:flex">
-          <div className="flex items-center gap-6">
-            {/* Logo */}
-            <a href={logo.url} className="flex items-center gap-2">
-              <img src={logo.src} className="max-h-8 dark:invert" alt={logo.alt} />
-              <span className="text-lg font-semibold tracking-tighter">
-                {logo.title}
-              </span>
-            </a>
-            <div className="flex items-center">
-              <NavigationMenu>
-                <NavigationMenuList>
-                  {menu.map((item) => renderMenuItem(item))}
-                </NavigationMenuList>
-              </NavigationMenu>
-            </div>
-          </div>
-          <div className="flex gap-2">
-            <Button asChild variant="outline" size="sm">
-              <a href={auth.login.url}>{auth.login.title}</a>
-            </Button>
-            <Button asChild size="sm">
-              <a href={auth.signup.url}>{auth.signup.title}</a>
-            </Button>
-          </div>
-        </nav>
+    <section className="sticky top-0 z-50 py-4 px-0 md:px-8 lg:px-16">
+      <nav
+        className=" 
+          hidden lg:flex
+          mx-auto 
+          items-center justify-space-between 
+          max-w-[1200px] h-[52px]
+          pt-4  pb-4 pl-8 
+          rounded-[99px]
+          backdrop-blur-[10px]
+          border border-[rgba(255,255,255,0.18)]
+          shadow-[inset_1px_1px_2px_rgba(255,255,255,0.3),inset_-1px_-1px_2px_rgba(255,255,255,0.1),inset_0_1px_10px_rgba(255,255,255,0.2)]
+        "
+      >
+        <div className="flex items-center  w-full">
+          {/* Logo */}
+          <a href={logo.url} className="flex items-center gap-2 ">
+            <Image
+              src="/logo1.png"
+              width={84}
+              height={50}
+              className=""
+              alt={logo.alt}
+            />
+          </a>
 
-        {/* Mobile Menu */}
-        <div className="block lg:hidden">
-          <div className="flex items-center justify-between">
-            {/* Logo */}
-            <a href={logo.url} className="flex items-center gap-2">
-              <img src={logo.src} className="max-h-8 dark:invert" alt={logo.alt} />
-            </a>
-            <Sheet>
-              <SheetTrigger asChild>
-                <Button variant="outline" size="icon">
-                  <Menu className="size-4" />
-                </Button>
-              </SheetTrigger>
-              <SheetContent className="overflow-y-auto">
-                <SheetHeader>
-                  <SheetTitle>
-                    <a href={logo.url} className="flex items-center gap-2">
-                      <img src={logo.src} className="max-h-8 dark:invert" alt={logo.alt} />
-                    </a>
-                  </SheetTitle>
-                </SheetHeader>
-                <div className="flex flex-col gap-6 p-4">
-                  <Accordion type="single" collapsible className="flex w-full flex-col gap-4">
-                    {menu.map((item) => renderMobileMenuItem(item))}
-                  </Accordion>
-
-                  <div className="flex flex-col gap-3">
-                    <Button asChild variant="outline">
-                      <a href={auth.login.url}>{auth.login.title}</a>
-                    </Button>
-                    <Button asChild>
-                      <a href={auth.signup.url}>{auth.signup.title}</a>
-                    </Button>
-                  </div>
-                </div>
-              </SheetContent>
-            </Sheet>
+          {/* Menu */}
+          <div className="ml-auto justify-between text-[#ECF1F4]  w-[423px] h-[39px] bg-red ">
+            <NavigationMenu>
+              <NavigationMenuList className=" w-68 ">
+                {menu.map((item) => renderMenuItem(item))}
+              </NavigationMenuList>
+            </NavigationMenu>
           </div>
         </div>
+      </nav>
+
+      {/* Mobile Menu */}
+      <div className="block lg:hidden">
+        <div className="flex items-center justify-between w-full
+          rounded-[80px]
+          bg-[rgba(236,241,244,0.03)]
+          backdrop-blur-[10px]
+          border border-[rgba(255,255,255,0.18)]
+          shadow-[inset_1px_1px_2px_rgba(255,255,255,0.3),inset_-1px_-1px_2px_rgba(255,255,255,0.1),inset_0_1px_10px_rgba(255,255,255,0.2)]"
+        >
+          {/* Logo */}
+          <a href={logo.url} className="flex items-center">
+            <Image 
+              src="/logo1.png" 
+              width={100}
+              height={200}
+              className=" px-6 " 
+              alt={logo.alt} 
+            />
+          </a>
+          <Sheet>
+  <SheetTrigger asChild>
+    <Button 
+      variant="ghost" 
+      size="icon"
+      className="text-[#8C8CA1] hover:bg-[rgba(255,255,255,0.1)]"
+    >
+      <Menu className="size-6 mr-15" />
+    </Button>
+  </SheetTrigger>
+  <SheetContent 
+    className="y-auto h-90 bg-[#31091EB2] backdrop-blur-[50px] "
+  >
+    <SheetHeader className="relative">
+      <SheetTitle>
+        <a href={logo.url} className="flex items-center gap-2">
+          <Image 
+            src="/logo1.png" 
+            width={60}
+            height={40}
+            alt={logo.alt} 
+          />
+        </a>
+      </SheetTitle>
+      {/* Close Button */}
+      <SheetClose asChild>
+        <Button
+          variant="ghost"
+          size="icon"
+          className="absolute right-0 top-0 text-[#8C8CA1] hover:bg-[rgba(255,255,255,0.1)]"
+        >
+          <X className="size-6 " />
+        </Button>
+      </SheetClose>
+    </SheetHeader>
+    <div className="flex flex-col gap-6 p-4">
+      <Accordion type="single" collapsible className=" text-white flex w-full flex-col gap-4">
+        {menu.map((item) => renderMobileMenuItem(item))}
+      </Accordion>
+    </div>
+  </SheetContent>
+</Sheet>
+        </div>
       </div>
+
     </section>
   );
 };
@@ -190,9 +169,9 @@ const renderMenuItem = (item) => {
     return (
       <NavigationMenuItem key={item.title}>
         <NavigationMenuTrigger>{item.title}</NavigationMenuTrigger>
-        <NavigationMenuContent className="bg-popover text-popover-foreground">
+        <NavigationMenuContent className="bg-white text-popover-foreground">
           {item.items.map((subItem) => (
-            <NavigationMenuLink asChild key={subItem.title} className="w-80">
+            <NavigationMenuLink asChild key={subItem.title} className="w-80 text-white">
               <SubMenuLink item={subItem} />
             </NavigationMenuLink>
           ))}
@@ -205,7 +184,7 @@ const renderMenuItem = (item) => {
     <NavigationMenuItem key={item.title}>
       <NavigationMenuLink
         href={item.url}
-        className="bg-background hover:bg-muted hover:text-accent-foreground group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors">
+        className="bg-transparent hover:bg-muted hover:text-accent-foreground group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors">
         {item.title}
       </NavigationMenuLink>
     </NavigationMenuItem>
@@ -216,7 +195,7 @@ const renderMobileMenuItem = (item) => {
   if (item.items) {
     return (
       <AccordionItem key={item.title} value={item.title} className="border-b-0">
-        <AccordionTrigger className="text-md py-0 font-semibold hover:no-underline">
+        <AccordionTrigger className="text-md py-0 font-semibold hover:no-underline text-white ">
           {item.title}
         </AccordionTrigger>
         <AccordionContent className="mt-2">
@@ -229,7 +208,7 @@ const renderMobileMenuItem = (item) => {
   }
 
   return (
-    <a key={item.title} href={item.url} className="text-md font-semibold">
+    <a key={item.title} href={item.url} className="text-md font-semibold text-[#FAFCFE] hover:text-white transition-colors">
       {item.title}
     </a>
   );
@@ -240,11 +219,11 @@ const SubMenuLink = ({
 }) => {
   return (
     <a
-      className="hover:bg-muted hover:text-accent-foreground flex min-w-80 select-none flex-row gap-4 rounded-md p-3 leading-none no-underline outline-none transition-colors"
+      className="hover:bg-transparent hover:text-accent-foreground flex min-w-80 select-none flex-row gap-4 rounded-md p-3 leading-none no-underline outline-none transition-colors"
       href={item.url}>
       <div className="text-foreground">{item.icon}</div>
       <div>
-        <div className="text-sm font-semibold">{item.title}</div>
+        <div className="text-[#FAFCFE] font-semibold">{item.title}</div>
         {item.description && (
           <p className="text-muted-foreground text-sm leading-snug">
             {item.description}
@@ -255,4 +234,4 @@ const SubMenuLink = ({
   );
 };
 
-export { Navbar1 };
+export default Navbar1;
