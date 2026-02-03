@@ -92,7 +92,7 @@
     left: 617px;
     top: 40px;
     opacity: 0.7;
-
+    
 }
 
 .horizontalLineLeft {
@@ -103,7 +103,7 @@
     top: 275px;
     left: 40px;
     opacity: 0.7;
-
+    
 }
 
 .horizontalLineRight {
@@ -114,7 +114,7 @@
     top: 275px;
     left: 650px;
     opacity: 0.7;
-
+    
 }
 
 .horizontalLineBottom {
@@ -125,7 +125,7 @@
     top: 530px;
     left: 40px;
     opacity: 0.7;
-
+   
 }
 
 .pillarsGrid {
@@ -161,8 +161,6 @@
     gap: 40px;
     margin-top: 0;
     padding-bottom: 0;
-    /* ensure text does not sit under the absolutely positioned image */
-    padding-right: 320px;
     position: relative;
     min-height: auto;
 }
@@ -217,22 +215,18 @@
 }
 
 .pillarImageOnly {
-    /* Desktop: absolutely position to the right of the pillar 5 content and vertically center */
-    position: absolute;
-    right: 40px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: auto;
+    position: relative;
+    width: 100%;
     display: flex;
     justify-content: flex-end;
-    padding: 0;
-    margin: 0;
+    padding-right: 40px;
+    margin-top: 20px;
     z-index: 2;
 }
 
 .pillarImage {
-    width: 260px;
-    height: auto;
+    width: 270px;
+    height: 203px;
     display: block;
     object-fit: contain;
 }
@@ -266,26 +260,11 @@
 }
 
 /* New Tablet Breakpoint */
-
-/* Adjust image for medium desktop/laptop widths */
-@media (max-width: 1000px) {
-    .pillarFull {
-        padding-right: 280px;
-    }
-
-    .pillarImage {
-        width: 240px;
-        height: auto;
-    }
-}
-
 @media (max-width: 640px) {
     .pillarFull {
         flex-direction: column;
         align-items: flex-start;
         gap: 30px;
-        /* mobile: remove extra right padding so layout is full width */
-        padding-right: 0;
     }
 
     .pillarImageOnly {
@@ -300,8 +279,8 @@
     }
 
     .pillarImage {
-        width: 220px;
-        height: auto;
+        width: 270px;
+        height: 203px;
     }
 }
 
@@ -350,12 +329,7 @@
         flex-direction: column;
     }
 
-    .pillarItem:not(:last-child) {
-        border-bottom: 1px solid #666666;
-        padding-bottom: 20px;
-        margin-bottom: 0;
-    }
-
+    
     .pillarNumber {
         font-size: 16px;
         font-weight: 700;
@@ -396,8 +370,6 @@
         width: 240px;
         height: auto;
         object-fit: contain;
-        align-self: center;
-        margin-top: 20px;
     }
 }
 
@@ -441,8 +413,8 @@
 
     .pillarItem {
         width: 100%;
-        padding: 20px 0;
-        gap: 10px;
+        padding: 16px 0;
+        gap: 8px;
         display: flex;
         flex-direction: column;
     }
@@ -450,8 +422,8 @@
     .pillarItem:not(:last-child) {
         border-bottom: 1px solid rgba(255, 255, 255, 0.3);
         opacity: 1;
-        padding-bottom: 20px;
-        margin-bottom: 0;
+        padding-bottom: 16px;
+        margin-bottom: 16px;
     }
 
     .pillarNumber {
@@ -491,390 +463,8 @@
     }
 
     .pillarImage {
-        width: 200px;
+        width: 180px;
         height: auto;
         object-fit: contain;
-    }
-}
-
-/*Who we are */
-.heroSection {
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 80px 60px;
-    border-top-left-radius: 60px;
-    border-top-right-radius: 60px;
-    background: linear-gradient(220.69deg, #FAFCFE 11.2%, #FFAEDC 50%, #FAFCFE 88.8%);
-    position: relative;
-    overflow: hidden;
-}
-
-.heroSection::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-    opacity: 0.1;
-    pointer-events: none;
-    z-index: 1;
-}
-
-.heroSection::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(220.69deg, #FAFCFE 11.2%, #FFAEDC 50%, #FAFCFE 88.8%);
-    opacity: 0;
-    animation: gradientPulse 8s ease-in-out infinite;
-}
-
-@keyframes gradientPulse {
-
-    0%,
-    100% {
-        opacity: 0;
-    }
-
-    50% {
-        opacity: 0.3;
-    }
-}
-
-.container {
-    max-width: 1440px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 100px;
-    position: relative;
-    z-index: 1;
-}
-
-/* Horizontal Layout Rows */
-.contentRow {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 80px;
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.contentRow.fadeIn {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.contentRow.fadeInDelay {
-    opacity: 1;
-    transform: translateY(0);
-    transition-delay: 0.3s;
-}
-
-.contentRowReverse {
-    flex-direction: row;
-}
-
-.textContent {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    max-width: 640px;
-    overflow: hidden;
-}
-
-.imageContent {
-    flex: 0 0 440px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Typography */
-.mainHeading {
-    font-family: 'Work Sans', sans-serif;
-    font-weight: 700;
-    font-size: 50px;
-    line-height: 100%;
-    letter-spacing: -0.03em;
-    text-transform: uppercase;
-    color: #06061A;
-    margin: 0;
-    word-wrap: break-word;
-    word-break: break-word;
-    overflow-wrap: break-word;
-    max-width: 100%;
-}
-
-.subText {
-    font-family: 'Work Sans', sans-serif;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 140%;
-    letter-spacing: 0;
-    color: #4A4A68;
-    margin: 0;
-    word-wrap: break-word;
-    word-break: break-word;
-    overflow-wrap: break-word;
-}
-
-.secondHeading {
-    font-family: 'Work Sans', sans-serif;
-    font-weight: 700;
-    font-size: 50px;
-    line-height: 100%;
-    letter-spacing: -0.03em;
-    text-transform: uppercase;
-    color: #06061A;
-    margin: 0;
-    word-wrap: break-word;
-    word-break: break-word;
-    overflow-wrap: break-word;
-    max-width: 100%;
-}
-
-.secondSubText {
-    font-family: 'Work Sans', sans-serif;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 140%;
-    letter-spacing: 0;
-    color: #4A4A68;
-    margin: 0;
-    word-wrap: break-word;
-    word-break: break-word;
-    overflow-wrap: break-word;
-}
-
-/* Image Styling */
-.heroImage {
-    width: 440px;
-    height: 440px;
-    object-fit: cover;
-    border-radius: 20px;
-    box-shadow: 0 10px 40px rgba(255, 174, 220, 0.3);
-    transition: all 0.3s ease;
-}
-
-.heroImage:hover {
-    transform: scale(1.02);
-    box-shadow: 0 15px 50px rgba(255, 174, 220, 0.4);
-}
-
-/* Button Styling */
-.knowMoreButton {
-    width: 156.39px;
-    height: 41.39px;
-    border-radius: 8px;
-    padding: 6px 14px;
-    background: #FAFCFE;
-    border: 2px solid #06061A;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-.buttonText {
-    font-family: 'Work Sans', sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    color: #06061A;
-    white-space: nowrap;
-}
-
-.arrowContainer {
-    width: 29.39px;
-    height: 29.39px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.arrowDefault,
-.arrowHover {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.arrowHover {
-    opacity: 0;
-}
-
-.knowMoreButton:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(6, 6, 26, 0.1);
-}
-
-.knowMoreButton:hover .arrowDefault {
-    opacity: 0;
-}
-
-.knowMoreButton:hover .arrowHover {
-    opacity: 1;
-}
-
-.knowMoreButton:active {
-    transform: translateY(0);
-    box-shadow: 0 4px 10px rgba(6, 6, 26, 0.15);
-}
-
-/* Responsive Design */
-@media (max-width: 640px) {
-    .contentRow {
-        gap: 60px;
-    }
-
-    .imageContent {
-        flex: 0 0 380px;
-    }
-
-    .heroImage {
-        width: 380px;
-        height: 380px;
-    }
-
-    .mainHeading,
-    .secondHeading {
-        font-size: 42px;
-    }
-
-    .subText,
-    .secondSubText {
-        font-size: 16px;
-    }
-}
-
-@media (max-width: 640px) {
-    .heroSection {
-        padding: 60px 30px;
-        border-top-left-radius: 40px;
-        border-top-right-radius: 40px;
-    }
-
-    /* increase vertical spacing on mobile */
-    .container {
-        gap: 100px;
-    }
-
-    /* Ensure image appears before text on mobile for both sections:
-       - For rows that are reversed on desktop keep normal column order
-       - For standard rows (text then image on desktop) show image first on mobile */
-    .contentRowReverse {
-        flex-direction: column;
-        gap: 40px;
-    }
-
-    .contentRow:not(.contentRowReverse) {
-        flex-direction: column-reverse;
-        gap: 40px;
-    }
-
-    .textContent {
-        max-width: 100%;
-        /* Mobile: use left alignment for better readability */
-        text-align: left;
-        align-items: stretch;
-    }
-
-    .imageContent {
-        flex: 0 0 auto;
-    }
-
-    .heroImage {
-        width: 320px;
-        height: 320px;
-    }
-
-    .mainHeading,
-    .secondHeading {
-        font-size: 36px;
-        letter-spacing: -0.02em;
-        text-align: left;
-    }
-
-    .subText,
-    .secondSubText {
-        font-size: 16px;
-        line-height: 150%;
-        text-align: left;
-    }
-
-    .knowMoreButton {
-        width: 140px;
-        height: 38px;
-    }
-
-    .buttonText {
-        font-size: 14px;
-    }
-
-    .arrowIcon {
-        width: 24px;
-        height: 24px;
-    }
-}
-
-@media (max-width: 480px) {
-    .heroSection {
-        padding: 40px 20px;
-        border-top-left-radius: 30px;
-        border-top-right-radius: 30px;
-    }
-
-    .container {
-        gap: 40px;
-    }
-
-    .contentRow {
-        gap: 30px;
-    }
-
-    .heroImage {
-        width: 280px;
-        height: 280px;
-    }
-
-    .mainHeading,
-    .secondHeading {
-        font-size: 28px;
-    }
-
-    .subText,
-    .secondSubText {
-        font-size: 15px;
-    }
-
-    .knowMoreButton {
-        width: 130px;
-        height: 36px;
-    }
-
-    .buttonText {
-        font-size: 13px;
-    }
-
-    .arrowIcon {
-        width: 20px;
-        height: 20px;
     }
 }

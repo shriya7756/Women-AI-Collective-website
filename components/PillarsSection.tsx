@@ -73,20 +73,20 @@ export default function PillarsSection() {
                                     <h3 className={styles.pillarTitle}>{pillar.title}</h3>
                                     <p className={styles.pillarText}>{pillar.description}</p>
                                 </div>
-                                {pillar.hasImage && (
-                                    <div className={styles.pillarImageOnly}>
-                                        <picture>
-                                            <source media="(max-width: 768px)" srcSet="/how we solve the problem img - mobile image.png" />
-                                            <img
-                                                src="/How we solve the problem Img.png"
-                                                alt="Sisterhood Support"
-                                                className={styles.pillarImage}
-                                            />
-                                        </picture>
-                                    </div>
-                                )}
                             </div>
                         ))}
+                    </div>
+
+                    {/* Image shown after all pillars (keeps desktop absolute placement, mobile shows it after pillar 5) */}
+                    <div className={styles.pillarImageOnly}>
+                        <picture>
+                            <source media="(max-width: 768px)" srcSet="/how we solve the problem img - mobile image.png" />
+                            <img
+                                src="/How we solve the problem Img.png"
+                                alt="Sisterhood Support"
+                                className={styles.pillarImage}
+                            />
+                        </picture>
                     </div>
                 </div>
             </div>
