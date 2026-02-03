@@ -1,0 +1,579 @@
+.section {
+    width: 100%;
+    max-width: 1440px;
+    min-height: auto;
+    margin: 0 auto;
+    padding: 150px clamp(50px, 10vw, 75px);
+    background-color: #06061A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 175px;
+}
+
+.heading {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 700;
+    font-size: 62.5px;
+    color: #FAFCFE;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 360px 320px 480px;
+    gap: 50px;
+    width: 1220px;
+    height: 890px;
+    margin: 0 auto;
+}
+
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card1 {
+    margin-left: 0px;
+    background: #F5C939;
+    width: 360px;
+    height: 420px;
+    opacity: 1;
+    padding: 70px 21.25px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 23.03px;
+    overflow: hidden;
+}
+
+.card2 {
+    width: 320px;
+    height: 420px;
+    opacity: 1;
+    padding: 20px 21.25px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border-radius: 10px;
+    background: #FFB0E2;
+    position: relative;
+    overflow: hidden;
+}
+
+.cardImage2 {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.card3 {
+    width: 480px;
+    height: 420px;
+    opacity: 1;
+    padding: 70px 21.25px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 23.03px;
+    background: linear-gradient(53.73deg, #E62376 45.09%, #FFFFFF 99.12%);
+    overflow: hidden;
+}
+
+.card4 {
+    background: #FFFFFF;
+    width: 350px;
+    height: 420px;
+    opacity: 1;
+    border-radius: 23.03px;
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-self: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.cardImage4 {
+    width: 100%;
+    height: 200px;
+    margin: 0;
+    object-fit: cover;
+    display: block;
+}
+
+/* Virtual Hackathon card in image has white bottom */
+.card5 {
+    width: 480px;
+    height: 420px;
+    opacity: 1;
+    border-radius: 23.03px;
+    box-shadow: 0px 0.89px 19.04px 0px #FFFFFF14;
+    background: url('/Frame 1171276338.png') no-repeat center center;
+    background-size: cover;
+    justify-self: center;
+    position: relative;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-left: 150px;
+    overflow: hidden;
+}
+
+.card6 {
+    width: 330px;
+    height: 420px;
+    opacity: 1;
+    margin-left: 150px;
+    padding: 70px 21.25px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 14.17px;
+    border-radius: 23.03px;
+    background: #8A38F5;
+    justify-self: center;
+    align-items: flex-start;
+    overflow: hidden;
+}
+
+.icon {
+    width: 122px;
+    height: 122px;
+    opacity: 1;
+    margin-bottom: auto;
+}
+
+.cardHeading {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 1.2;
+    margin: 0;
+    word-break: break-word;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    max-width: 100%;
+}
+
+.cardText {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    font-size: 17.5px;
+    line-height: 1.4;
+    margin: 0;
+    word-break: break-word;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    max-width: 100%;
+}
+
+/* Light text for dark cards, dark text for light cards */
+/* Specific text colors based on backgrounds */
+.card1 .cardHeading,
+.card1 .cardText,
+.card1 .icon {
+    color: #333333;
+}
+
+.card2 .cardHeading,
+.card2 .cardText {
+    color: #333333;
+    ;
+    z-index: 2;
+    position: relative;
+}
+
+.card3 .cardHeading,
+.card3 .cardText {
+    color: #ECF1F4;
+
+}
+
+.card4 .cardHeading {
+    color: #333333;
+    width: 100%;
+    opacity: 1;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 120%;
+    letter-spacing: -1%;
+    margin: 0;
+    padding: 0 21.25px;
+}
+
+.card4 .cardText {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    letter-spacing: 0;
+    color: #333333;
+    margin: 0;
+    padding: 0 21.25px;
+}
+
+.card5 .cardHeading {
+    color: #ECF1F4;
+    z-index: 2;
+    position: relative;
+    width: 100%;
+    height: auto;
+    top: auto;
+    left: auto;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 120%;
+    letter-spacing: -2%;
+    display: flex;
+    align-items: flex-start;
+}
+
+.card5 .cardText {
+    color: #ECF1F4;
+    z-index: 2;
+    position: relative;
+    width: 100%;
+    height: auto;
+    top: auto;
+    left: auto;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    display: flex;
+    align-items: flex-start;
+}
+
+.card6 .cardHeading,
+.card6 .cardText {
+    color: #ECF1F4;
+
+}
+
+.cardImageBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+}
+
+.cardContent {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: 100%;
+    width: 100%;
+
+}
+
+.cardImage5 {
+    width: 87.5px;
+    height: 87.5px;
+    object-fit: contain;
+    position: relative;
+    top: auto;
+    left: auto;
+    margin-bottom: 6.25px;
+}
+
+.cardImage1,
+.cardImage3,
+.cardImage6 {
+    width: 87.5px;
+    height: 87.5px;
+    object-fit: contain;
+    margin-bottom: 6.25px;
+}
+
+.whiteArrow {
+    width: 35px;
+    height: 35px;
+    opacity: 1;
+    position: relative;
+    top: auto;
+    left: auto;
+    display: block;
+    margin-top: auto;
+}
+
+/* Tablet & Large Devices: iPad Mini, iPad Air, ASUS ZenBook Fold (640px - 1440px) */
+@media (max-width: 1440px) and (min-width: 641px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: clamp(30px, 3vw, 50px);
+        width: 100%;
+        max-width: 90vw;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .card1,
+    .card2,
+    .card3,
+    .card4,
+    .card5,
+    .card6 {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 360 / 420;
+        padding: clamp(15px, 3vw, 70px) clamp(10px, 2vw, 21.25px);
+        gap: clamp(10px, 2vw, 20px);
+        margin: 0;
+    }
+
+    .card1 {
+        padding-top: clamp(40px, 8vw, 70px);
+        padding-bottom: clamp(10px, 2vw, 20px);
+    }
+
+    .card2 {
+        padding: clamp(15px, 3vw, 28.34px) clamp(10px, 2vw, 21.25px);
+    }
+
+    .card3 {
+        padding-top: clamp(40px, 8vw, 70px);
+        padding-bottom: clamp(20px, 4vw, 40px);
+    }
+
+    .card4 {
+        padding-top: 0;
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: clamp(10px, 2vw, 21.25px);
+    }
+
+    .card5 {
+        padding: clamp(15px, 3vw, 30px) clamp(10px, 2vw, 20px);
+        margin-left: 0;
+    }
+
+    .card6 {
+        padding-top: clamp(40px, 8vw, 70px);
+        padding-bottom: clamp(20px, 4vw, 40px);
+        margin-left: 0;
+    }
+
+    .cardImage1,
+    .cardImage3,
+    .cardImage6 {
+        width: clamp(50px, 8vw, 87.5px);
+        height: clamp(50px, 8vw, 87.5px);
+        margin-bottom: clamp(5px, 1vw, 6.25px);
+    }
+
+    .cardImage2 {
+        width: 100%;
+        height: clamp(150px, 25vw, 225px);
+        border-radius: 8px;
+    }
+
+    .cardImage4 {
+        width: 100%;
+        height: clamp(150px, 25vw, 200px);
+        margin: 0 0 clamp(8px, 1.5vw, 8px) 0;
+    }
+
+    .card4 .cardHeading,
+    .card4 .cardText {
+        padding: 0 clamp(10px, 2vw, 21.25px);
+    }
+
+    .cardImage5 {
+        width: clamp(50px, 8vw, 87.5px);
+        height: clamp(50px, 8vw, 87.5px);
+        margin-bottom: clamp(5px, 1vw, 6.25px);
+    }
+
+    .whiteArrow {
+        width: clamp(25px, 4vw, 35px);
+        height: clamp(25px, 4vw, 35px);
+    }
+
+    .cardHeading {
+        font-size: clamp(18px, 3vw, 30px);
+    }
+
+    .cardText {
+        font-size: clamp(13px, 2vw, 17.5px);
+    }
+
+    .card5 .cardHeading {
+        font-size: clamp(20px, 3.5vw, 32px);
+    }
+
+    .card5 .cardText {
+        font-size: clamp(12px, 2vw, 16px);
+    }
+
+    .section {
+        padding: clamp(80px, 12vw, 150px) clamp(30px, 5vw, 75px);
+        gap: clamp(60px, 10vw, 175px);
+    }
+
+    .heading {
+        font-size: clamp(36px, 6vw, 62.5px);
+    }
+}
+
+@media (max-width: 640px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        width: 100%;
+        height: auto;
+    }
+
+    .section {
+        padding: 80px 30px;
+        gap: 80px;
+        min-height: auto;
+    }
+
+    .heading {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 640px) {
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        width: 300px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .section {
+        padding: 60px 20px;
+        gap: 60px;
+    }
+
+    .heading {
+        font-size: 28px;
+    }
+
+    .card1,
+    .card2,
+    .card3,
+    .card4,
+    .card5,
+    .card6 {
+        width: 300px;
+        height: 260px;
+        gap: 0px;
+        border-radius: 23.03px;
+        padding: 20px;
+        margin: 0 auto;
+    }
+
+    .card4 {
+        padding-top: 0;
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 20px;
+    }
+
+    .cardImage1,
+    .cardImage3,
+    .cardImage6 {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 8px;
+    }
+
+    .cardImage2 {
+        width: 100%;
+        height: 120px;
+        border-radius: 8px;
+        object-fit: cover;
+        margin-bottom: 5px;
+    }
+
+    .cardImage4 {
+        width: 100%;
+        height: 120px;
+        margin: 0 0 8px 0;
+        object-fit: cover;
+    }
+
+    .card4 .cardHeading,
+    .card4 .cardText {
+        padding: 0 20px;
+    }
+
+    .cardImage5 {
+        width: 50px;
+        height: 50px;
+        position: relative;
+        margin-bottom: 8px;
+        object-fit: contain;
+    }
+
+    .card5 .cardHeading,
+    .card5 .cardText {
+        position: static;
+        width: 100%;
+        height: auto;
+        top: auto;
+        left: auto;
+        font-size: 16px;
+    }
+
+    .card5 .cardHeading {
+        font-size: 18px;
+    }
+
+    .whiteArrow {
+        width: 30px;
+        height: 30px;
+        position: static;
+        top: auto;
+        left: auto;
+        margin-top: auto;
+    }
+
+    .cardHeading {
+        font-size: 18px;
+    }
+
+    .cardText {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+        padding: 60px 16px;
+    }
+
+    .heading {
+        font-size: 24px;
+    }
+
+    .cardHeading {
+        font-size: 20px;
+    }
+
+    .cardText {
+        font-size: 14px;
+    }
+}
