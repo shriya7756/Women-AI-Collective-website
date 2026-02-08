@@ -9,11 +9,11 @@ export default function ProgramPage() {
     <main className="bg-[#06061A] text-white font-sans min-h-screen block lg:hidden">
 
       {/* NAVBAR */}
-      
+
 
       {/* HERO SECTION */}
       <section className="px-5 pt-10 md:px-16 lg:px-20">
-        
+
         {/* TOP FULL IMAGE */}
         <div className="relative w-full max-w-[390px] mx-auto rounded-lg overflow-hidden">
           <Image
@@ -54,7 +54,7 @@ export default function ProgramPage() {
           </Button>
         </div>
 
-<div className="relative w-full max-w-[390px] mx-auto rounded-lg overflow-hidden ">
+        <div className="relative w-full max-w-[390px] mx-auto rounded-lg overflow-hidden ">
           <Image
             src="/Rectangle 1.png"
             alt="Master Gen AI"
@@ -68,17 +68,17 @@ export default function ProgramPage() {
 
         {/* HERO CONTENT */}
         <div className="mt-16 text-left md:max-w-[520px] md:text-left md:mx-0 mx-auto">
-<p>Let’s Face it</p>
+          <p>Let’s Face it</p>
           <h1 className="text-[28px] md:text-[42px] leading-tight font-extrabold">
-           AI IS NOT THE FUTURE, <br /> IT'S A PRESENT
+            AI IS NOT THE FUTURE, <br /> IT&apos;S A PRESENT
           </h1>
 
           <p className="mt-5 text-[15px] opacity-80">
-           While you're wondering if you should learn AI, 
-           smart girls already are. Companies across every industry are desperately seeking 
-           employees who can work alongside AI, not against it. Adapt now to be the leader of tomorrow!
+            While you&apos;re wondering if you should learn AI,
+            smart girls already are. Companies across every industry are desperately seeking
+            employees who can work alongside AI, not against it. Adapt now to be the leader of tomorrow!
           </p>
-</div>
+        </div>
       </section>
     </main>
   );

@@ -14,7 +14,7 @@ const WhoIsThisForSection = () => {
 
             <div className={styles.rightContent}>
                 <span className={styles.subHeading}>Who Is This For?</span>
-                <h2 className={styles.heading}>PERFECT IF YOU'RE</h2>
+                <h2 className={styles.heading}>PERFECT IF YOU&apos;RE</h2>
 
                 <ul className={styles.list}>
                     <li className={styles.listItem}>

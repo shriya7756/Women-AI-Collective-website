@@ -7,7 +7,8 @@ export default function WhatWeStandForSection() {
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
-        setIsVisible(true);
+        const timer = setTimeout(() => setIsVisible(true), 100);
+        return () => clearTimeout(timer);
     }, []);
 
     const pillars = [
@@ -37,7 +38,7 @@ export default function WhatWeStandForSection() {
                 <h1 className={`${styles.mainTitle} ${isVisible ? styles.fadeIn : ''}`}>
                     What we stand for?
                 </h1>
-                
+
                 <div className={`${styles.pillarsContainer} ${isVisible ? styles.fadeIn : ''}`}>
                     {pillars.map((pillar) => (
                         <div key={pillar.id} className={styles.pillarCard}>
