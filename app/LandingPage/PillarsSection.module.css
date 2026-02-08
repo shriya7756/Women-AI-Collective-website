@@ -86,7 +86,7 @@
 /* Precise Divider Lines */
 .verticalLine {
     position: absolute;
-    width: 1px;
+    width: 2px;
     height: 470px;
     background: #666666;
     left: 617px;
@@ -98,7 +98,7 @@
 .horizontalLineLeft {
     position: absolute;
     width: 530px;
-    height: 1px;
+    height: 2px;
     background: #666666;
     top: 275px;
     left: 40px;
@@ -109,7 +109,7 @@
 .horizontalLineRight {
     position: absolute;
     width: 604px;
-    height: 1px;
+    height: 2px;
     background: #666666;
     top: 275px;
     left: 650px;
@@ -120,7 +120,7 @@
 .horizontalLineBottom {
     position: absolute;
     width: 1220px;
-    height: 1px;
+    height: 2px;
     background: #666666;
     top: 530px;
     left: 40px;
