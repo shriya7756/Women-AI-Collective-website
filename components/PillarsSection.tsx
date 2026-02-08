@@ -80,7 +80,7 @@ export default function PillarsSection() {
                     {/* Image shown after all pillars (keeps desktop absolute placement, mobile shows it after pillar 5) */}
                     <div className={styles.pillarImageOnly}>
                         <picture>
-                            <source media="(max-width: 768px)" srcSet="/how we solve the problem img - mobile image.png" />
+                            <source media="(max-width: 768px)" srcSet="/how-we-ssolve-the-problem-img-mobile.png" />
                             <img
                                 src="/How we solve the problem Img.png"
                                 alt="Sisterhood Support"

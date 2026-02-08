@@ -1,13 +1,14 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import styles from './PillarsSection.module.css';
+import styles from './WhoWeAreSection.module.css';
 
 export default function WhoWeAreSection() {
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
-        setIsVisible(true);
+        const timer = setTimeout(() => setIsVisible(true), 100);
+        return () => clearTimeout(timer);
     }, []);
 
     return (
