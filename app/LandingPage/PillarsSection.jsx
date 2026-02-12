@@ -76,7 +76,7 @@ export default function PillarsSection() {
                                 {pillar.hasImage && (
                                     <div className={styles.pillarImageOnly}>
                                         <picture>
-                                            <source media="(max-width: 768px)" srcSet="/how-we-ssolve-the-problem-img-mobile.png" />
+                                            <source media="(max-width: 768px)" srcSet="/how we solve the problem img - mobile image.png" />
                                             <img
                                                 src="/How we solve the problem Img.png"
                                                 alt="Sisterhood Support"
